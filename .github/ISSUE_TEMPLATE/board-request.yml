@@ -1,0 +1,83 @@
+name: Request / report a board
+description: Add support for (or report) a RongYuan RY5088 magnetic keyboard.
+title: "[board] <model> — dev_id <id>"
+labels: ["board-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping map the RY5088 lineup! Fill in what you can — the
+        `dev_id` and an evidence bundle are the most important parts.
+
+        **Flashing is recoverable.** `ry-flash` only writes the application
+        slot over USB and is variant-safe (it refuses any image that is not a
+        matching `AT32F405 8KMKB` keyboard build). A bad flash can be redone;
+        if the app slot is wiped the MCU falls back to ROM-DFU and can be
+        re-flashed. You do **not** need to open the case.
+
+  - type: input
+    id: dev_id
+    attributes:
+      label: dev_id
+      description: "From `ry-flash --detect` (the per-model id; the USB PID is shared across many boards)."
+      placeholder: "e.g. 2307"
+    validations:
+      required: true
+
+  - type: input
+    id: model
+    attributes:
+      label: Marketed model name
+      description: The name printed on the box / product page.
+      placeholder: "e.g. MonsGeek FUN60 Ultra"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: switch_type
+    attributes:
+      label: Switch type
+      options:
+        - HE (Hall-effect)
+        - TMR
+        - Unknown
+    validations:
+      required: true
+
+  - type: dropdown
+    id: wireless
+    attributes:
+      label: Wireless
+      description: Does this model have a 2.4GHz dongle / Bluetooth (PAN1080 co-processor)?
+      options:
+        - "No — wired only"
+        - "Yes — 2.4GHz / Bluetooth"
+        - Unknown
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence bundle
+      description: |
+        Paste the device descriptors and/or the stock firmware hash. Helpful sources:
+          - `ry-flash --detect --json` (device info, including dev_id)
+          - USB descriptors (VID/PID, interfaces, report descriptors)
+          - sha256 of the stock firmware image, if you have it
+      render: text
+      placeholder: |
+        $ ry-flash --detect --json
+        { ... }
+
+        sha256(stock.bin) = ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else
+      description: Layout (60/68/75/...), per-key vs zone RGB, oddities, photos, etc.
+    validations:
+      required: false

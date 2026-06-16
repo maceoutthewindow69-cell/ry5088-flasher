@@ -1,0 +1,95 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # Pure host-side logic tests + profile lint. Native gcc + python3 only;
+  # no ARM toolchain and no Artery BSP required.
+  firmware-host-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12" # generator needs 3.11+ (stdlib tomllib)
+
+      - name: Install build tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends build-essential
+
+      - name: Host unit tests + profile lint
+        working-directory: firmware
+        run: |
+          make test
+          make test-wireless
+          make check
+
+  # Cross-compile every board profile with arm-none-eabi-gcc + the Artery BSP.
+  firmware-arm-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12" # generator runs as part of each build
+
+      - name: Install ARM toolchain
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            gcc-arm-none-eabi binutils-arm-none-eabi libnewlib-arm-none-eabi
+
+      - name: Fetch Artery AT32F402/405 BSP
+        run: |
+          git clone --depth 1 \
+            https://github.com/ArteryTek/AT32F402_405_Firmware_Library \
+            firmware/vendor/AT32F402_405_Firmware_Library
+
+      - name: Build every profile
+        run: |
+          shopt -s nullglob
+          built=0
+          for p in firmware/profiles/*.toml; do
+            id=$(basename "$p" .toml)
+            echo "::group::build $id"
+            make -C firmware PROFILE="$id"
+            echo "::endgroup::"
+            built=$((built + 1))
+          done
+          if [ "$built" -eq 0 ]; then
+            echo "no profiles found under firmware/profiles/" >&2
+            exit 1
+          fi
+          echo "built $built profile image(s)"
+
+  # The ry-flash Rust binary: unit tests + release build.
+  flasher:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install hidapi / udev dev libraries
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            libhidapi-dev libudev-dev pkg-config
+
+      - uses: dtolnay/rust-toolchain@stable
+
+      - name: Test and build
+        working-directory: flasher
+        run: |
+          cargo test
+          cargo build --release

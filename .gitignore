@@ -1,0 +1,16 @@
+# Rust
+/flasher/target/
+
+# Firmware build output (generated board_*.h/.c + objects + per-profile images)
+/firmware/build/
+/firmware/**/build/
+*.o
+*.elf
+*.bin
+*.map
+
+# Artery BSP (fetched separately — see firmware/README.md)
+/firmware/**/vendor/
+
+# OS / editor
+.DS_Store

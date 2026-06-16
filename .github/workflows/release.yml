@@ -1,0 +1,98 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write # required to create/attach assets to the GitHub Release
+
+defaults:
+  run:
+    shell: bash # one shell for all 3 OSes (Git Bash on Windows)
+
+jobs:
+  # Build the ry-flash binary on every supported desktop OS and attach it
+  # to the release.
+  flasher:
+    name: flasher (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            asset: ry-flash-linux-x86_64
+          - os: macos-latest
+            asset: ry-flash-macos-arm64
+          - os: windows-latest
+            asset: ry-flash-windows-x86_64.exe
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Linux dependencies
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            libhidapi-dev libudev-dev pkg-config
+
+      - uses: dtolnay/rust-toolchain@stable
+
+      - name: Build release binary
+        working-directory: flasher
+        run: cargo build --release
+
+      - name: Stage binary
+        run: |
+          mkdir -p dist
+          bin="ry-flash"
+          [ "$RUNNER_OS" = "Windows" ] && bin="ry-flash.exe"
+          cp "flasher/target/release/$bin" "dist/${{ matrix.asset }}"
+
+      - name: Upload to release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/${{ matrix.asset }}
+
+  # Cross-compile every board profile and attach the .bin images.
+  firmware:
+    name: firmware images
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install ARM toolchain
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            gcc-arm-none-eabi binutils-arm-none-eabi libnewlib-arm-none-eabi
+
+      - name: Fetch Artery AT32F402/405 BSP
+        run: |
+          git clone --depth 1 \
+            https://github.com/ArteryTek/AT32F402_405_Firmware_Library \
+            firmware/vendor/AT32F402_405_Firmware_Library
+
+      - name: Build all profile images
+        run: |
+          shopt -s nullglob
+          mkdir -p dist
+          for p in firmware/profiles/*.toml; do
+            id=$(basename "$p" .toml)
+            echo "::group::build $id"
+            make -C firmware PROFILE="$id"
+            echo "::endgroup::"
+            cp "firmware/build/$id/ry5088_$id.bin" "dist/ry5088_$id.bin"
+          done
+          ls -l dist
+
+      - name: Upload to release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/*.bin

@@ -1,0 +1,5803 @@
+{
+ "_note": "RY5088 + sibling-platform device map, regenerated from the MonsGeek/RongYuan V4 driver board catalog. dev_id == GET_INFOR id (16-bit LE); the USB PID is shared across models, so dev_id is the only safe discriminator. Entries whose platform is not 'ry5088' are recognised for display only — the flasher refuses any image that is not an AT32F405 keyboard build.",
+ "devices": [
+  {
+   "dev_id": 853,
+   "vid": 12625,
+   "pid": 16405,
+   "name": "yc500_c98_soc",
+   "displayName": "C98",
+   "company": "NOPPOO",
+   "platform": "yc500",
+   "infor_id": [
+    85,
+    3
+   ]
+  },
+  {
+   "dev_id": 888,
+   "vid": 12625,
+   "pid": 16405,
+   "name": "yc500_f108_soc",
+   "displayName": "F108",
+   "company": "NOPPOO",
+   "platform": "yc500",
+   "infor_id": [
+    120,
+    3
+   ]
+  },
+  {
+   "dev_id": 913,
+   "vid": 12625,
+   "pid": 16405,
+   "name": "yc500_cl87_soc",
+   "displayName": "C87P",
+   "company": "NOPPOO",
+   "platform": "yc500",
+   "infor_id": [
+    145,
+    3
+   ]
+  },
+  {
+   "dev_id": 969,
+   "vid": 12625,
+   "pid": 16405,
+   "name": "yc500_mg108b_soc",
+   "displayName": "MG108B",
+   "company": "MonsGeek",
+   "platform": "yc500",
+   "infor_id": [
+    201,
+    3
+   ]
+  },
+  {
+   "dev_id": 983,
+   "vid": 12625,
+   "pid": 16405,
+   "name": "yc500_m1wnosled_soc",
+   "displayName": "M1W",
+   "company": "MonsGeek",
+   "platform": "yc500",
+   "infor_id": [
+    215,
+    3
+   ]
+  },
+  {
+   "dev_id": 994,
+   "vid": 12625,
+   "pid": 16405,
+   "name": "yc500_c84_soc",
+   "displayName": "C84",
+   "company": "NOPPOO",
+   "platform": "yc500",
+   "infor_id": [
+    226,
+    3
+   ]
+  },
+  {
+   "dev_id": 1023,
+   "vid": 12625,
+   "pid": 16405,
+   "name": "yc500_5108bplus_uk_soc",
+   "displayName": "5108B Plus",
+   "company": "akko",
+   "platform": "yc500",
+   "infor_id": [
+    255,
+    3
+   ]
+  },
+  {
+   "dev_id": 1168,
+   "vid": 12625,
+   "pid": 16405,
+   "name": "yc3121_sg8967_3m_soc",
+   "displayName": "K86",
+   "company": "AttackShark",
+   "platform": "yc3121",
+   "infor_id": [
+    144,
+    4
+   ]
+  },
+  {
+   "dev_id": 1200,
+   "vid": 12625,
+   "pid": 16405,
+   "name": "yc3121_m3w_soc",
+   "displayName": "M3W",
+   "company": "MonsGeek",
+   "platform": "yc3121",
+   "infor_id": [
+    176,
+    4
+   ]
+  },
+  {
+   "dev_id": 1215,
+   "vid": 12625,
+   "pid": 16405,
+   "name": "yc500_m7wnosled_soc",
+   "displayName": "M7W",
+   "company": "MonsGeek",
+   "platform": "yc500",
+   "infor_id": [
+    191,
+    4
+   ]
+  },
+  {
+   "dev_id": 1220,
+   "vid": 12625,
+   "pid": 16405,
+   "name": "yc500_c98pro_soc",
+   "displayName": "C98 Pro",
+   "company": "NOPPOO",
+   "platform": "yc500",
+   "infor_id": [
+    196,
+    4
+   ]
+  },
+  {
+   "dev_id": 1304,
+   "vid": 12625,
+   "pid": 16405,
+   "name": "yc3121_mod007pc_cx_dm",
+   "displayName": "MOD007PC-CX",
+   "company": "akko",
+   "platform": "yc3121",
+   "infor_id": [
+    24,
+    5
+   ]
+  },
+  {
+   "dev_id": 1308,
+   "vid": 12625,
+   "pid": 16405,
+   "name": "yc3121_m5w_soc",
+   "displayName": "M5W",
+   "company": "MonsGeek",
+   "platform": "yc3121",
+   "infor_id": [
+    28,
+    5
+   ]
+  },
+  {
+   "dev_id": 1343,
+   "vid": 12625,
+   "pid": 16405,
+   "name": "yc3121_k75rgb_3m_v100",
+   "displayName": "K75RGB",
+   "company": "AttackShark",
+   "platform": "yc3121",
+   "infor_id": [
+    63,
+    5
+   ]
+  },
+  {
+   "dev_id": 1352,
+   "vid": 12625,
+   "pid": 16422,
+   "name": "mouse_pan1080_g63_4k",
+   "displayName": "Valkyrie M1",
+   "company": "VKMS",
+   "platform": "mouse",
+   "infor_id": [
+    72,
+    5
+   ]
+  },
+  {
+   "dev_id": 1374,
+   "vid": 1452,
+   "pid": 591,
+   "name": "yc300_pc75_s_mac_white_plus",
+   "displayName": "PC75B Plus-S",
+   "company": "akko",
+   "platform": "yc300",
+   "infor_id": [
+    94,
+    5
+   ]
+  },
+  {
+   "dev_id": 1419,
+   "vid": 12625,
+   "pid": 16405,
+   "name": "yc500_ice75_soc",
+   "displayName": "ICE75",
+   "company": "MonsGeek",
+   "platform": "yc500",
+   "infor_id": [
+    139,
+    5
+   ]
+  },
+  {
+   "dev_id": 1466,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "yc3121_sg8948_dm_hall",
+   "displayName": "K85",
+   "company": "AttackShark",
+   "platform": "yc3121",
+   "infor_id": [
+    186,
+    5
+   ]
+  },
+  {
+   "dev_id": 1528,
+   "vid": 12625,
+   "pid": 16387,
+   "name": "yc300_5075b_plus_s",
+   "displayName": "5075B Plus-S",
+   "company": "akko",
+   "platform": "yc300",
+   "infor_id": [
+    248,
+    5
+   ]
+  },
+  {
+   "dev_id": 1588,
+   "vid": 12625,
+   "pid": 16405,
+   "name": "yc3121_mu01_soc",
+   "displayName": "MU01",
+   "company": "akko",
+   "platform": "yc3121",
+   "infor_id": [
+    52,
+    6
+   ]
+  },
+  {
+   "dev_id": 1604,
+   "vid": 12625,
+   "pid": 16437,
+   "name": "yc3121_m1whes_hall_8k",
+   "displayName": "M1W HE",
+   "company": "MonsGeek",
+   "platform": "yc3121",
+   "infor_id": [
+    68,
+    6
+   ]
+  },
+  {
+   "dev_id": 1637,
+   "vid": 12625,
+   "pid": 16437,
+   "name": "yc3121_mod007bv3he_soc_8k",
+   "displayName": "MOD007B V3 HE",
+   "company": "akko",
+   "platform": "yc3121",
+   "infor_id": [
+    101,
+    6
+   ]
+  },
+  {
+   "dev_id": 1643,
+   "vid": 12625,
+   "pid": 16422,
+   "name": "mouse_r3_1k_8k",
+   "displayName": "R3",
+   "company": "AttackShark",
+   "platform": "mouse",
+   "infor_id": [
+    107,
+    6
+   ]
+  },
+  {
+   "dev_id": 1660,
+   "vid": 12625,
+   "pid": 16426,
+   "name": "mouse_x3_8k",
+   "displayName": "X3PRO",
+   "company": "AttackShark",
+   "platform": "mouse",
+   "infor_id": [
+    124,
+    6
+   ]
+  },
+  {
+   "dev_id": 1674,
+   "vid": 12625,
+   "pid": 16437,
+   "name": "yc3121_mg75s_hes_dm_hall_8k",
+   "displayName": "MG75S HE",
+   "company": "MonsGeek",
+   "platform": "yc3121",
+   "infor_id": [
+    138,
+    6
+   ]
+  },
+  {
+   "dev_id": 1679,
+   "vid": 12625,
+   "pid": 16405,
+   "name": "yc3121_k75rgb_dm",
+   "displayName": "K75RGB",
+   "company": "AttackShark",
+   "platform": "yc3121",
+   "infor_id": [
+    143,
+    6
+   ]
+  },
+  {
+   "dev_id": 1723,
+   "vid": 12625,
+   "pid": 16405,
+   "name": "yc3121_kf850_uk_screen",
+   "displayName": "Dynatab75X-UK",
+   "company": "EPOMAKER",
+   "platform": "yc3121",
+   "infor_id": [
+    187,
+    6
+   ]
+  },
+  {
+   "dev_id": 1724,
+   "vid": 12625,
+   "pid": 16405,
+   "name": "yc3121_sg8995_3m_soc",
+   "displayName": "X85PRO",
+   "company": "AttackShark",
+   "platform": "yc3121",
+   "infor_id": [
+    188,
+    6
+   ]
+  },
+  {
+   "dev_id": 1755,
+   "vid": 12625,
+   "pid": 16422,
+   "name": "mouse_pan1080_g62_screen_1k_8k",
+   "displayName": "AJ159 APEX",
+   "company": "AJAZZMOUSE",
+   "platform": "mouse",
+   "infor_id": [
+    219,
+    6
+   ]
+  },
+  {
+   "dev_id": 1815,
+   "vid": 12625,
+   "pid": 16405,
+   "name": "yc3121_c75pro_soc",
+   "displayName": "C75 PRO",
+   "company": "NOPPOO",
+   "platform": "yc3121",
+   "infor_id": [
+    23,
+    7
+   ]
+  },
+  {
+   "dev_id": 1842,
+   "vid": 12625,
+   "pid": 16426,
+   "name": "mouse_pan1080_frm_f9_1k_3311",
+   "displayName": "GOZO E",
+   "company": "MYNK",
+   "platform": "mouse",
+   "infor_id": [
+    50,
+    7
+   ]
+  },
+  {
+   "dev_id": 1851,
+   "vid": 12625,
+   "pid": 16422,
+   "name": "mouse_pan1080_g182_ajazz_3395_1k_8k",
+   "displayName": "AJ179 PRO",
+   "company": "AJAZZMOUSE",
+   "platform": "mouse",
+   "infor_id": [
+    59,
+    7
+   ]
+  },
+  {
+   "dev_id": 1852,
+   "vid": 12625,
+   "pid": 16422,
+   "name": "mouse_pan1080_g182_ajazz_screen3950_1k_8k",
+   "displayName": "AJ179 APEX",
+   "company": "AJAZZMOUSE",
+   "platform": "mouse",
+   "infor_id": [
+    60,
+    7
+   ]
+  },
+  {
+   "dev_id": 1893,
+   "vid": 12625,
+   "pid": 16422,
+   "name": "mouse_pan1080_r2b_3950_1k_8k",
+   "displayName": "R2",
+   "company": "AttackShark",
+   "platform": "mouse",
+   "infor_id": [
+    101,
+    7
+   ]
+  },
+  {
+   "dev_id": 1905,
+   "vid": 12625,
+   "pid": 16437,
+   "name": "yc3121_mk606_uk_dm_hall_8k",
+   "displayName": "RxD 60% HE",
+   "company": "rongyuan",
+   "platform": "yc3121",
+   "infor_id": [
+    113,
+    7
+   ]
+  },
+  {
+   "dev_id": 1916,
+   "vid": 12625,
+   "pid": 16422,
+   "name": "mouse_pan1080_m8_3311",
+   "displayName": "GG Vulture Suite",
+   "company": "GGVULTURESuite",
+   "platform": "mouse",
+   "infor_id": [
+    124,
+    7
+   ]
+  },
+  {
+   "dev_id": 1921,
+   "vid": 12625,
+   "pid": 16437,
+   "name": "yc3121_mk825_dm_hall_8k",
+   "displayName": "MATATAKI (US)",
+   "company": "AIM1Keys",
+   "platform": "yc3121",
+   "infor_id": [
+    129,
+    7
+   ]
+  },
+  {
+   "dev_id": 1923,
+   "vid": 12625,
+   "pid": 16405,
+   "name": "yc3121_kf102_soc",
+   "displayName": "5098B",
+   "company": "akko",
+   "platform": "yc3121",
+   "infor_id": [
+    131,
+    7
+   ]
+  },
+  {
+   "dev_id": 1933,
+   "vid": 12625,
+   "pid": 16405,
+   "name": "yc3121_m1w_v5_soc",
+   "displayName": "M1 V5",
+   "company": "MonsGeek",
+   "platform": "yc3121",
+   "infor_id": [
+    141,
+    7
+   ]
+  },
+  {
+   "dev_id": 1972,
+   "vid": 12625,
+   "pid": 16426,
+   "name": "mouse_pan1080_g68b_3395_8k_8k",
+   "displayName": "G68B",
+   "company": "DNS",
+   "platform": "mouse",
+   "infor_id": [
+    180,
+    7
+   ]
+  },
+  {
+   "dev_id": 1976,
+   "vid": 12625,
+   "pid": 16426,
+   "name": "mouse_pan1080_g182_snxzc28_3395_8k_8k",
+   "displayName": "K-Gaming K18",
+   "company": "KConnect",
+   "platform": "mouse",
+   "infor_id": [
+    184,
+    7
+   ]
+  },
+  {
+   "dev_id": 1991,
+   "vid": 12625,
+   "pid": 16405,
+   "name": "yc3121_mu02_soc",
+   "displayName": "MU02",
+   "company": "akko",
+   "platform": "yc3121",
+   "infor_id": [
+    199,
+    7
+   ]
+  },
+  {
+   "dev_id": 1996,
+   "vid": 12625,
+   "pid": 16405,
+   "name": "yc3121_sg9012_3m_soc",
+   "displayName": "X98PRO",
+   "company": "AttackShark",
+   "platform": "yc3121",
+   "infor_id": [
+    204,
+    7
+   ]
+  },
+  {
+   "dev_id": 2036,
+   "vid": 12625,
+   "pid": 16422,
+   "name": "mouse_pan1080_g182_daxaprow2_3395_1k_8k",
+   "displayName": "DAXA PRO WIRELESS II",
+   "company": "DAXAPROWIRELESSII",
+   "platform": "mouse",
+   "infor_id": [
+    244,
+    7
+   ]
+  },
+  {
+   "dev_id": 2116,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_mk636_dm_8k_hall",
+   "displayName": "TITAN68HE",
+   "company": "TITANHUB",
+   "platform": "ry5088",
+   "infor_id": [
+    68,
+    8
+   ]
+  },
+  {
+   "dev_id": 2220,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_mk658_dm_8k_hall",
+   "displayName": "TITAN60",
+   "company": "TITANHUB",
+   "platform": "ry5088",
+   "infor_id": [
+    172,
+    8
+   ]
+  },
+  {
+   "dev_id": 2227,
+   "vid": 14154,
+   "pid": 41494,
+   "name": "ry5088_x78rt001_mag75_8k_dm",
+   "displayName": "VK MAG75 Pro",
+   "company": "VKMS",
+   "platform": "ry5088",
+   "infor_id": [
+    179,
+    8
+   ]
+  },
+  {
+   "dev_id": 2231,
+   "vid": 12625,
+   "pid": 20517,
+   "name": "pan1086_cx_choc68_cat_3m",
+   "displayName": "Choc 68",
+   "company": "NOPPOO",
+   "platform": "pan1086",
+   "infor_id": [
+    183,
+    8
+   ]
+  },
+  {
+   "dev_id": 2234,
+   "vid": 14154,
+   "pid": 41491,
+   "name": "ry5088_x78rt004_mag75_8k_dm",
+   "displayName": "VK MAG75 Lite",
+   "company": "VKMS",
+   "platform": "ry5088",
+   "infor_id": [
+    186,
+    8
+   ]
+  },
+  {
+   "dev_id": 2246,
+   "vid": 14154,
+   "pid": 41494,
+   "name": "ry5088_x78rt001_mag75_8k_dm",
+   "displayName": "VK MAG 75",
+   "company": "VKMS",
+   "platform": "ry5088",
+   "infor_id": [
+    198,
+    8
+   ]
+  },
+  {
+   "dev_id": 2247,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_m1w_v5_soc_8k",
+   "displayName": "M1 V5 TMR",
+   "company": "MonsGeek",
+   "platform": "ry5088",
+   "infor_id": [
+    199,
+    8
+   ]
+  },
+  {
+   "dev_id": 2249,
+   "vid": 12625,
+   "pid": 20530,
+   "name": "mouse_pan1080_g16_3395_1k_1k",
+   "displayName": "X1",
+   "company": "AttackShark",
+   "platform": "mouse",
+   "infor_id": [
+    201,
+    8
+   ]
+  },
+  {
+   "dev_id": 2255,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_sg9005_rt004_dm_hall_8k",
+   "displayName": "AK680 MAX",
+   "company": "AJAZZMOUSE",
+   "platform": "ry5088",
+   "infor_id": [
+    207,
+    8
+   ]
+  },
+  {
+   "dev_id": 2268,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_sg9023_dm_8k_rt002",
+   "displayName": "X65HE",
+   "company": "AttackShark",
+   "platform": "ry5088",
+   "infor_id": [
+    220,
+    8
+   ]
+  },
+  {
+   "dev_id": 2270,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_x68rt004_8k_dm",
+   "displayName": "X68HE",
+   "company": "AttackShark",
+   "platform": "ry5088",
+   "infor_id": [
+    222,
+    8
+   ]
+  },
+  {
+   "dev_id": 2278,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_xs_kf068_dm_8k",
+   "displayName": "KF068",
+   "company": "rongyuan",
+   "platform": "ry5088",
+   "infor_id": [
+    230,
+    8
+   ]
+  },
+  {
+   "dev_id": 2279,
+   "vid": 12625,
+   "pid": 20517,
+   "name": "pan1086_k62_soc",
+   "displayName": "V99",
+   "company": "EWEADNV",
+   "platform": "pan1086",
+   "infor_id": [
+    231,
+    8
+   ]
+  },
+  {
+   "dev_id": 2281,
+   "vid": 12625,
+   "pid": 20527,
+   "name": "ry5088_agk75u2_soc_8k_002",
+   "displayName": "AGK75 U2",
+   "company": "蚂蚁电竞",
+   "platform": "ry5088",
+   "infor_id": [
+    233,
+    8
+   ]
+  },
+  {
+   "dev_id": 2296,
+   "vid": 12625,
+   "pid": 20517,
+   "name": "pan1086_k60s_soc",
+   "displayName": "V82 RGB",
+   "company": "EWEADNV",
+   "platform": "pan1086",
+   "infor_id": [
+    248,
+    8
+   ]
+  },
+  {
+   "dev_id": 2297,
+   "vid": 12625,
+   "pid": 20517,
+   "name": "pan1086_k63_soc",
+   "displayName": "V99",
+   "company": "EWEADNV",
+   "platform": "pan1086",
+   "infor_id": [
+    249,
+    8
+   ]
+  },
+  {
+   "dev_id": 2299,
+   "vid": 12625,
+   "pid": 20526,
+   "name": "ry5088_fun60_nolight_1k_005",
+   "displayName": "FUN60",
+   "company": "MonsGeek",
+   "platform": "ry5088",
+   "infor_id": [
+    251,
+    8
+   ]
+  },
+  {
+   "dev_id": 2301,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_k80_dm_8k_002",
+   "displayName": "K68",
+   "company": "EWEADNV",
+   "platform": "ry5088",
+   "infor_id": [
+    253,
+    8
+   ]
+  },
+  {
+   "dev_id": 2304,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_akko_fun60pro_1m_8k",
+   "displayName": "FUN60 PRO",
+   "company": "MonsGeek",
+   "platform": "ry5088",
+   "infor_id": [
+    0,
+    9
+   ]
+  },
+  {
+   "dev_id": 2305,
+   "vid": 12625,
+   "pid": 20527,
+   "name": "ry5088_fun60pro_8k_002",
+   "displayName": "FUN60 PRO",
+   "company": "MonsGeek",
+   "platform": "ry5088",
+   "infor_id": [
+    1,
+    9
+   ]
+  },
+  {
+   "dev_id": 2306,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_fun60max_8k",
+   "displayName": "FUN60 MAX",
+   "company": "MonsGeek",
+   "platform": "ry5088",
+   "infor_id": [
+    2,
+    9
+   ]
+  },
+  {
+   "dev_id": 2307,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_fun60max2_8k",
+   "displayName": "FUN60 Ultra",
+   "company": "MonsGeek",
+   "platform": "ry5088",
+   "infor_id": [
+    3,
+    9
+   ]
+  },
+  {
+   "dev_id": 2308,
+   "vid": 12625,
+   "pid": 20527,
+   "name": "ry5088_sg9006_8k_002",
+   "displayName": "X65PRO",
+   "company": "AttackShark",
+   "platform": "ry5088",
+   "infor_id": [
+    4,
+    9
+   ]
+  },
+  {
+   "dev_id": 2310,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_sg_sg8948_1m_8k_v300",
+   "displayName": "ZENITH PRO",
+   "company": "ZENITHPROSoftware",
+   "platform": "ry5088",
+   "infor_id": [
+    6,
+    9
+   ]
+  },
+  {
+   "dev_id": 2311,
+   "vid": 12625,
+   "pid": 20524,
+   "name": "yc3121_mk606_68k_dm_hall_v300",
+   "displayName": "MK-BOX",
+   "company": "MageGee",
+   "platform": "yc3121",
+   "infor_id": [
+    7,
+    9
+   ]
+  },
+  {
+   "dev_id": 2320,
+   "vid": 14154,
+   "pid": 41509,
+   "name": "ry5088_x118mag68_dm_8k_002",
+   "displayName": "VK MAG68",
+   "company": "VKMS",
+   "platform": "ry5088",
+   "infor_id": [
+    16,
+    9
+   ]
+  },
+  {
+   "dev_id": 2326,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_k65rt002_dm_hall_8k",
+   "displayName": "Beat65-keyboard",
+   "company": "XinMengK65Keyboard",
+   "platform": "ry5088",
+   "infor_id": [
+    22,
+    9
+   ]
+  },
+  {
+   "dev_id": 2334,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_tk75_1m_8k_hall",
+   "displayName": "TK75-HE",
+   "company": "gamakay2",
+   "platform": "ry5088",
+   "infor_id": [
+    30,
+    9
+   ]
+  },
+  {
+   "dev_id": 2335,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_sg_sg9015_1m_8k",
+   "displayName": "M82HE",
+   "company": "Mambasnake",
+   "platform": "ry5088",
+   "infor_id": [
+    31,
+    9
+   ]
+  },
+  {
+   "dev_id": 2336,
+   "vid": 12625,
+   "pid": 20527,
+   "name": "ry5088_sg9005_8k_8k_002",
+   "displayName": "AK680 MAX",
+   "company": "AJAZZMOUSE",
+   "platform": "ry5088",
+   "infor_id": [
+    32,
+    9
+   ]
+  },
+  {
+   "dev_id": 2338,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_xs_2338",
+   "displayName": "KF068",
+   "company": "rongyuan",
+   "platform": "ry5088",
+   "infor_id": [
+    34,
+    9
+   ]
+  },
+  {
+   "dev_id": 2342,
+   "vid": 12625,
+   "pid": 20531,
+   "name": "ry5088_hc_ff101_machine",
+   "displayName": "FF101",
+   "company": "rongyuan",
+   "platform": "ry5088",
+   "infor_id": [
+    38,
+    9
+   ]
+  },
+  {
+   "dev_id": 2343,
+   "vid": 12625,
+   "pid": 20527,
+   "name": "ry5088_sg9005_8k_1k_002",
+   "displayName": "AK680 MAX",
+   "company": "AJAZZMOUSE",
+   "platform": "ry5088",
+   "infor_id": [
+    39,
+    9
+   ]
+  },
+  {
+   "dev_id": 2344,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_kc68rt_dm",
+   "displayName": "KC68",
+   "company": "凯酷",
+   "platform": "ry5088",
+   "infor_id": [
+    40,
+    9
+   ]
+  },
+  {
+   "dev_id": 2348,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_battle68pro_dm_8k_hall_002",
+   "displayName": "ZAP68",
+   "company": "EWEADNV",
+   "platform": "ry5088",
+   "infor_id": [
+    44,
+    9
+   ]
+  },
+  {
+   "dev_id": 2352,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_fun60ultra_8k_dm_dfn4",
+   "displayName": "FUN60 Ultra",
+   "company": "MonsGeek",
+   "platform": "ry5088",
+   "infor_id": [
+    48,
+    9
+   ]
+  },
+  {
+   "dev_id": 2356,
+   "vid": 12625,
+   "pid": 20527,
+   "name": "ry5088_sg_sg9015_3m_8k",
+   "displayName": "X82PRO HE",
+   "company": "AttackShark",
+   "platform": "ry5088",
+   "infor_id": [
+    52,
+    9
+   ]
+  },
+  {
+   "dev_id": 2367,
+   "vid": 12625,
+   "pid": 20517,
+   "name": "pan1086_spm_pl108w_soc",
+   "displayName": "PL108W",
+   "company": "SPMControls",
+   "platform": "pan1086",
+   "infor_id": [
+    63,
+    9
+   ]
+  },
+  {
+   "dev_id": 2368,
+   "vid": 12625,
+   "pid": 20527,
+   "name": "ry5088_mk666_soc_8k_002",
+   "displayName": "X60HE",
+   "company": "Mambasnake",
+   "platform": "ry5088",
+   "infor_id": [
+    64,
+    9
+   ]
+  },
+  {
+   "dev_id": 2370,
+   "vid": 12625,
+   "pid": 20527,
+   "name": "ry5088_x68_8k_002",
+   "displayName": "X68PRO HE",
+   "company": "AttackShark",
+   "platform": "ry5088",
+   "infor_id": [
+    66,
+    9
+   ]
+  },
+  {
+   "dev_id": 2371,
+   "vid": 12625,
+   "pid": 20527,
+   "name": "ry5088_sg9005_ns68_002_8k_1k_nolight",
+   "displayName": "AK680 MAX",
+   "company": "AJAZZMOUSE",
+   "platform": "ry5088",
+   "infor_id": [
+    67,
+    9
+   ]
+  },
+  {
+   "dev_id": 2380,
+   "vid": 12625,
+   "pid": 20530,
+   "name": "mouse_pan1076_g59b_3104",
+   "displayName": "Air GW24",
+   "company": "MEETION",
+   "platform": "mouse",
+   "infor_id": [
+    76,
+    9
+   ]
+  },
+  {
+   "dev_id": 2381,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_fun60ultra_8k_dm",
+   "displayName": "FUN60 Ultra",
+   "company": "MonsGeek",
+   "platform": "ry5088",
+   "infor_id": [
+    77,
+    9
+   ]
+  },
+  {
+   "dev_id": 2383,
+   "vid": 12625,
+   "pid": 20517,
+   "name": "pan1086_yx_k72_soc",
+   "displayName": "K75",
+   "company": "EWEADNV",
+   "platform": "pan1086",
+   "infor_id": [
+    79,
+    9
+   ]
+  },
+  {
+   "dev_id": 2386,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_fq_x107_1m_8k",
+   "displayName": "X107",
+   "company": "rongyuan",
+   "platform": "ry5088",
+   "infor_id": [
+    82,
+    9
+   ]
+  },
+  {
+   "dev_id": 2387,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_fun60ultra_8k_2049e",
+   "displayName": "FUN60 Ultra",
+   "company": "MonsGeek",
+   "platform": "ry5088",
+   "infor_id": [
+    83,
+    9
+   ]
+  },
+  {
+   "dev_id": 2388,
+   "vid": 12625,
+   "pid": 20530,
+   "name": "mouse_pan1076_yyx0082_3311",
+   "displayName": "Tanto E",
+   "company": "Fantech",
+   "platform": "mouse",
+   "infor_id": [
+    84,
+    9
+   ]
+  },
+  {
+   "dev_id": 2397,
+   "vid": 12625,
+   "pid": 20517,
+   "name": "pan1086_kf202_soc",
+   "displayName": "KF202",
+   "company": "LTCFn",
+   "platform": "pan1086",
+   "infor_id": [
+    93,
+    9
+   ]
+  },
+  {
+   "dev_id": 2398,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_fq_x78_3m_8k_8k",
+   "displayName": "MAG75 Max",
+   "company": "VKMS",
+   "platform": "ry5088",
+   "infor_id": [
+    94,
+    9
+   ]
+  },
+  {
+   "dev_id": 2406,
+   "vid": 12625,
+   "pid": 20524,
+   "name": "yc3121_nbd_mk606_uk_dm_v300",
+   "displayName": "MK221",
+   "company": "KEYCEO",
+   "platform": "yc3121",
+   "infor_id": [
+    102,
+    9
+   ]
+  },
+  {
+   "dev_id": 2408,
+   "vid": 12625,
+   "pid": 20517,
+   "name": "pan1086_k72x86_soc",
+   "displayName": "X86",
+   "company": "AttackShark",
+   "platform": "pan1086",
+   "infor_id": [
+    104,
+    9
+   ]
+  },
+  {
+   "dev_id": 2410,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_fq_vk99_3m_8k",
+   "displayName": "VK99",
+   "company": "VKMS",
+   "platform": "ry5088",
+   "infor_id": [
+    106,
+    9
+   ]
+  },
+  {
+   "dev_id": 2426,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_zap68_8k_1k_hall",
+   "displayName": "ZAP68",
+   "company": "EWEADNV",
+   "platform": "ry5088",
+   "infor_id": [
+    122,
+    9
+   ]
+  },
+  {
+   "dev_id": 2436,
+   "vid": 12625,
+   "pid": 20527,
+   "name": "ry5088_beat65_8k_1k_002",
+   "displayName": "Beat65-keyboard",
+   "company": "XinMengK65Keyboard",
+   "platform": "ry5088",
+   "infor_id": [
+    132,
+    9
+   ]
+  },
+  {
+   "dev_id": 2446,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_hc68_8k_dm_002",
+   "displayName": "Chronos 68",
+   "company": "Syntech",
+   "platform": "ry5088",
+   "infor_id": [
+    142,
+    9
+   ]
+  },
+  {
+   "dev_id": 2447,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_k2413a_soc_hall_8k_8k",
+   "displayName": "NX68pro",
+   "company": "腹灵",
+   "platform": "ry5088",
+   "infor_id": [
+    143,
+    9
+   ]
+  },
+  {
+   "dev_id": 2450,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_gk75_dm_8k_002",
+   "displayName": "GK75",
+   "company": "Skyloong",
+   "platform": "ry5088",
+   "infor_id": [
+    146,
+    9
+   ]
+  },
+  {
+   "dev_id": 2453,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_mod007v5he_soc_8k_8k",
+   "displayName": "MOD007 V5 HE",
+   "company": "akko",
+   "platform": "ry5088",
+   "infor_id": [
+    149,
+    9
+   ]
+  },
+  {
+   "dev_id": 2454,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_nj81cp_8k_8k",
+   "displayName": "NJ81-CP",
+   "company": "Keydous",
+   "platform": "ry5088",
+   "infor_id": [
+    150,
+    9
+   ]
+  },
+  {
+   "dev_id": 2460,
+   "vid": 12625,
+   "pid": 16422,
+   "name": "mouse_pan1080_g182_fwd_zc21_3311",
+   "displayName": "OTN-MS661+",
+   "company": "Onten",
+   "platform": "mouse",
+   "infor_id": [
+    156,
+    9
+   ]
+  },
+  {
+   "dev_id": 2464,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_fun60pro_8k_dm",
+   "displayName": "FUN60 PRO",
+   "company": "MonsGeek",
+   "platform": "ry5088",
+   "infor_id": [
+    160,
+    9
+   ]
+  },
+  {
+   "dev_id": 2472,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_x682_8k_dm",
+   "displayName": "X68HE",
+   "company": "AttackShark",
+   "platform": "ry5088",
+   "infor_id": [
+    168,
+    9
+   ]
+  },
+  {
+   "dev_id": 2475,
+   "vid": 12625,
+   "pid": 16422,
+   "name": "mouse_pan1080_m660_s203",
+   "displayName": "KY-M660",
+   "company": "KEYCEO",
+   "platform": "mouse",
+   "infor_id": [
+    171,
+    9
+   ]
+  },
+  {
+   "dev_id": 2484,
+   "vid": 12625,
+   "pid": 16422,
+   "name": "mouse_pan1080_m680b_3212",
+   "displayName": "OME-119",
+   "company": "NIX",
+   "platform": "mouse",
+   "infor_id": [
+    180,
+    9
+   ]
+  },
+  {
+   "dev_id": 2485,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_yx_k80_x68_dm_8k_hall_002",
+   "displayName": "X68",
+   "company": "ROYALAXE",
+   "platform": "ry5088",
+   "infor_id": [
+    181,
+    9
+   ]
+  },
+  {
+   "dev_id": 2492,
+   "vid": 12625,
+   "pid": 16422,
+   "name": "mouse_pan1080_xmg05_1k_8k_3395",
+   "displayName": "M512",
+   "company": "KUSkillKorp",
+   "platform": "mouse",
+   "infor_id": [
+    188,
+    9
+   ]
+  },
+  {
+   "dev_id": 2494,
+   "vid": 1130,
+   "pid": 301,
+   "name": "ry5088_cherrymx82_8k_8k",
+   "displayName": "MX8.2",
+   "company": "cherry",
+   "platform": "ry5088",
+   "infor_id": [
+    190,
+    9
+   ]
+  },
+  {
+   "dev_id": 2499,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_kf109_defender68_1m_8k",
+   "displayName": "DEFENDER 68",
+   "company": "PIIFOXDRIVER",
+   "platform": "ry5088",
+   "infor_id": [
+    195,
+    9
+   ]
+  },
+  {
+   "dev_id": 2501,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_tk75_8k_dm_hall",
+   "displayName": "TK75-HE",
+   "company": "gamakay2",
+   "platform": "ry5088",
+   "infor_id": [
+    197,
+    9
+   ]
+  },
+  {
+   "dev_id": 2507,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_gk75_dm_8k_002_nolight",
+   "displayName": "GK75",
+   "company": "Skyloong",
+   "platform": "ry5088",
+   "infor_id": [
+    203,
+    9
+   ]
+  },
+  {
+   "dev_id": 2510,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_zap68ultra_8k_8k_hall",
+   "displayName": "ZAP68Ultra",
+   "company": "EWEADNV",
+   "platform": "ry5088",
+   "infor_id": [
+    206,
+    9
+   ]
+  },
+  {
+   "dev_id": 2520,
+   "vid": 12625,
+   "pid": 20527,
+   "name": "ry5088_x87a_he75mag_8k_8k_002",
+   "displayName": "HE75 Mag",
+   "company": "EPOMAKER",
+   "platform": "ry5088",
+   "infor_id": [
+    216,
+    9
+   ]
+  },
+  {
+   "dev_id": 2525,
+   "vid": 12625,
+   "pid": 20530,
+   "name": "mouse_pan1076_jy_m682_3311",
+   "displayName": "KSN Jupiter SE",
+   "company": "KYSONASpaceSeries",
+   "platform": "mouse",
+   "infor_id": [
+    221,
+    9
+   ]
+  },
+  {
+   "dev_id": 2527,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_zap87_8k_1k_002",
+   "displayName": "ZAP87",
+   "company": "EWEADNV",
+   "platform": "ry5088",
+   "infor_id": [
+    223,
+    9
+   ]
+  },
+  {
+   "dev_id": 2535,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_beat652_8k_dm_002",
+   "displayName": "Beat65-keyboard",
+   "company": "XinMengK65Keyboard",
+   "platform": "ry5088",
+   "infor_id": [
+    231,
+    9
+   ]
+  },
+  {
+   "dev_id": 2536,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_akko_m1_v5_uk_3m_pan1080_8k",
+   "displayName": "M1 V5 TMR",
+   "company": "MonsGeek",
+   "platform": "ry5088",
+   "infor_id": [
+    232,
+    9
+   ]
+  },
+  {
+   "dev_id": 2546,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_k80a_dm_8k_002",
+   "displayName": "K-68M",
+   "company": "MICROPACK",
+   "platform": "ry5088",
+   "infor_id": [
+    242,
+    9
+   ]
+  },
+  {
+   "dev_id": 2550,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_mmdkm60c_dm_8k_002",
+   "displayName": "Epomaker M65",
+   "company": "EPOMAKER",
+   "platform": "ry5088",
+   "infor_id": [
+    246,
+    9
+   ]
+  },
+  {
+   "dev_id": 2552,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_sg_sg8948g_1m_8k",
+   "displayName": "K85",
+   "company": "AttackShark",
+   "platform": "ry5088",
+   "infor_id": [
+    248,
+    9
+   ]
+  },
+  {
+   "dev_id": 2554,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_zap68ultra_8k_dm",
+   "displayName": "ZAP68Ultra",
+   "company": "EWEADNV",
+   "platform": "ry5088",
+   "infor_id": [
+    250,
+    9
+   ]
+  },
+  {
+   "dev_id": 2557,
+   "vid": 12625,
+   "pid": 16422,
+   "name": "mouse_pan1080_keb_m607pro_3395_1k_8k",
+   "displayName": "KSN Mercury PRO",
+   "company": "KYSONASpaceSeries",
+   "platform": "mouse",
+   "infor_id": [
+    253,
+    9
+   ]
+  },
+  {
+   "dev_id": 2560,
+   "vid": 14154,
+   "pid": 41512,
+   "name": "ry5088_fq_ns68_3m_8k_8k_rt002",
+   "displayName": "NB68",
+   "company": "VKMS",
+   "platform": "ry5088",
+   "infor_id": [
+    0,
+    10
+   ]
+  },
+  {
+   "dev_id": 2563,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_rts1v2_dm_hall_8k",
+   "displayName": "RTS1 V2",
+   "company": "DELUX",
+   "platform": "ry5088",
+   "infor_id": [
+    3,
+    10
+   ]
+  },
+  {
+   "dev_id": 2572,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_yx_k80_ns68_1m_8k_rt002",
+   "displayName": "NS68",
+   "company": "gamakay2",
+   "platform": "ry5088",
+   "infor_id": [
+    12,
+    10
+   ]
+  },
+  {
+   "dev_id": 2574,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_x110b_deep80_8k_1k",
+   "displayName": "DEEP80",
+   "company": "EWEADNV",
+   "platform": "ry5088",
+   "infor_id": [
+    14,
+    10
+   ]
+  },
+  {
+   "dev_id": 2576,
+   "vid": 12625,
+   "pid": 20527,
+   "name": "ry5088_nj98cp_8k_8k_002",
+   "displayName": "NJ98-CP",
+   "company": "Keydous",
+   "platform": "ry5088",
+   "infor_id": [
+    16,
+    10
+   ]
+  },
+  {
+   "dev_id": 2578,
+   "vid": 12625,
+   "pid": 20517,
+   "name": "ry5088_x111_8k_1k",
+   "displayName": "DEEP68",
+   "company": "EWEADNV",
+   "platform": "ry5088",
+   "infor_id": [
+    18,
+    10
+   ]
+  },
+  {
+   "dev_id": 2581,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_mjk_mineral02_8k_8k",
+   "displayName": "Mineral02",
+   "company": "akko",
+   "platform": "ry5088",
+   "infor_id": [
+    21,
+    10
+   ]
+  },
+  {
+   "dev_id": 2585,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_akko_mjk_m3v5_8k_8k",
+   "displayName": "M3 V5",
+   "company": "MonsGeek",
+   "platform": "ry5088",
+   "infor_id": [
+    25,
+    10
+   ]
+  },
+  {
+   "dev_id": 2586,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_kiiboom68c_dm_8k",
+   "displayName": "KIIBOOM-68C",
+   "company": "EPOMAKER",
+   "platform": "ry5088",
+   "infor_id": [
+    26,
+    10
+   ]
+  },
+  {
+   "dev_id": 2589,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_zdm_xm_beat68_1m_8k",
+   "displayName": "Beat68-keyboard",
+   "company": "XinMengK65Keyboard",
+   "platform": "ry5088",
+   "infor_id": [
+    29,
+    10
+   ]
+  },
+  {
+   "dev_id": 2590,
+   "vid": 12625,
+   "pid": 20527,
+   "name": "ry5088_zdm_xm_beat68_3m_8k_1k",
+   "displayName": "Beat68-keyboard",
+   "company": "XinMengK65Keyboard",
+   "platform": "ry5088",
+   "infor_id": [
+    30,
+    10
+   ]
+  },
+  {
+   "dev_id": 2592,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_shengkuan_sg9028_3m_hall_8k_8k_001",
+   "displayName": "ALUX68 PRO",
+   "company": "AJAZZMOUSE",
+   "platform": "ry5088",
+   "infor_id": [
+    32,
+    10
+   ]
+  },
+  {
+   "dev_id": 2593,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_shengkuan_sg9028nolight_3m_8k_1k",
+   "displayName": "ALUX68 PRO",
+   "company": "AJAZZMOUSE",
+   "platform": "ry5088",
+   "infor_id": [
+    33,
+    10
+   ]
+  },
+  {
+   "dev_id": 2594,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_zdm_zyl_free_wolf_f68_3m_8k_1k",
+   "displayName": "F68 PRO",
+   "company": "FREEWOLF",
+   "platform": "ry5088",
+   "infor_id": [
+    34,
+    10
+   ]
+  },
+  {
+   "dev_id": 2599,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_shengkuan_sg9028variant_3m_8k_1k",
+   "displayName": "ALUX68 PRO",
+   "company": "AJAZZMOUSE",
+   "platform": "ry5088",
+   "infor_id": [
+    39,
+    10
+   ]
+  },
+  {
+   "dev_id": 2600,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_akko_fun60_1m_8k",
+   "displayName": "FUN60 PRO",
+   "company": "MonsGeek",
+   "platform": "ry5088",
+   "infor_id": [
+    40,
+    10
+   ]
+  },
+  {
+   "dev_id": 2601,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_akko_mjk_m2v5_8k_8k",
+   "displayName": "M2 V5",
+   "company": "MonsGeek",
+   "platform": "ry5088",
+   "infor_id": [
+    41,
+    10
+   ]
+  },
+  {
+   "dev_id": 2605,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_ak680mcc_8k_8k",
+   "displayName": "AK680MC",
+   "company": "AJAZZMOUSE",
+   "platform": "ry5088",
+   "infor_id": [
+    45,
+    10
+   ]
+  },
+  {
+   "dev_id": 2608,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_ak680mce_8k_dm",
+   "displayName": "AK680MC",
+   "company": "AJAZZMOUSE",
+   "platform": "ry5088",
+   "infor_id": [
+    48,
+    10
+   ]
+  },
+  {
+   "dev_id": 2609,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_ak680mcd_8k_1k",
+   "displayName": "AK680MC",
+   "company": "AJAZZMOUSE",
+   "platform": "ry5088",
+   "infor_id": [
+    49,
+    10
+   ]
+  },
+  {
+   "dev_id": 2611,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_mk610_8k_dm",
+   "displayName": "Gaming Keyboard",
+   "company": "rongyuan",
+   "platform": "ry5088",
+   "infor_id": [
+    51,
+    10
+   ]
+  },
+  {
+   "dev_id": 2613,
+   "vid": 12625,
+   "pid": 20517,
+   "name": "pan1086_nbd_ik75_3m_1k",
+   "displayName": "IK75",
+   "company": "rongyuan",
+   "platform": "pan1086",
+   "infor_id": [
+    53,
+    10
+   ]
+  },
+  {
+   "dev_id": 2618,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_gk06_8k_1k",
+   "displayName": "GK06-61",
+   "company": "rongyuan",
+   "platform": "ry5088",
+   "infor_id": [
+    58,
+    10
+   ]
+  },
+  {
+   "dev_id": 2619,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_mjk_gem02_8k_8k",
+   "displayName": "Gem02",
+   "company": "akko",
+   "platform": "ry5088",
+   "infor_id": [
+    59,
+    10
+   ]
+  },
+  {
+   "dev_id": 2621,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_sg9040_dm_8k_002",
+   "displayName": "ALUX60",
+   "company": "AJAZZMOUSE",
+   "platform": "ry5088",
+   "infor_id": [
+    61,
+    10
+   ]
+  },
+  {
+   "dev_id": 2622,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_sg9040_dm_8k_002_nolight",
+   "displayName": "ALUX60",
+   "company": "AJAZZMOUSE",
+   "platform": "ry5088",
+   "infor_id": [
+    62,
+    10
+   ]
+  },
+  {
+   "dev_id": 2623,
+   "vid": 12625,
+   "pid": 20517,
+   "name": "pan1086_ck100_soc",
+   "displayName": "CK100",
+   "company": "叠韵创新",
+   "platform": "pan1086",
+   "infor_id": [
+    63,
+    10
+   ]
+  },
+  {
+   "dev_id": 2624,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_yc100_8k_1k",
+   "displayName": "YC100",
+   "company": "rongyuan",
+   "platform": "ry5088",
+   "infor_id": [
+    64,
+    10
+   ]
+  },
+  {
+   "dev_id": 2626,
+   "vid": 1130,
+   "pid": 321,
+   "name": "ry5088_cherry_k5_tmr_8k_dm",
+   "displayName": "K5",
+   "company": "cherry",
+   "platform": "ry5088",
+   "infor_id": [
+    66,
+    10
+   ]
+  },
+  {
+   "dev_id": 2628,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_mk606_68k_dm_8k_uk",
+   "displayName": "GKX68",
+   "company": "GKX68MAGNUM",
+   "platform": "ry5088",
+   "infor_id": [
+    68,
+    10
+   ]
+  },
+  {
+   "dev_id": 2633,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_beat75_8k_1k",
+   "displayName": "Beat75",
+   "company": "AttackShark",
+   "platform": "ry5088",
+   "infor_id": [
+    73,
+    10
+   ]
+  },
+  {
+   "dev_id": 2634,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_zdm_zyl_free_wolf_f68_1m_1k",
+   "displayName": "F68",
+   "company": "FREEWOLF",
+   "platform": "ry5088",
+   "infor_id": [
+    74,
+    10
+   ]
+  },
+  {
+   "dev_id": 2637,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_smart875he_8k_8k",
+   "displayName": "SMART 875",
+   "company": "EWEADNV",
+   "platform": "ry5088",
+   "infor_id": [
+    77,
+    10
+   ]
+  },
+  {
+   "dev_id": 2638,
+   "vid": 12625,
+   "pid": 20527,
+   "name": "ry5088_k80ns68_8k_1k_002",
+   "displayName": "NS68",
+   "company": "gamakay2",
+   "platform": "ry5088",
+   "infor_id": [
+    78,
+    10
+   ]
+  },
+  {
+   "dev_id": 2642,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_fq_x122_rt001_3m_8k_8k",
+   "displayName": "G84 HE",
+   "company": "EPOMAKER",
+   "platform": "ry5088",
+   "infor_id": [
+    82,
+    10
+   ]
+  },
+  {
+   "dev_id": 2644,
+   "vid": 12625,
+   "pid": 20482,
+   "name": "yc3123_afd_fk5304_1m_1k_soc",
+   "displayName": "YUNZII QL108",
+   "company": "YUNZII",
+   "platform": "yc3123",
+   "infor_id": [
+    84,
+    10
+   ]
+  },
+  {
+   "dev_id": 2645,
+   "vid": 12625,
+   "pid": 20530,
+   "name": "mouse_pan1076_yyx_018_s205",
+   "displayName": "GS01",
+   "company": "EWEADNV",
+   "platform": "mouse",
+   "infor_id": [
+    85,
+    10
+   ]
+  },
+  {
+   "dev_id": 2646,
+   "vid": 12625,
+   "pid": 20517,
+   "name": "pan1086_k62v99a_dm",
+   "displayName": "V99",
+   "company": "EWEADNV",
+   "platform": "pan1086",
+   "infor_id": [
+    86,
+    10
+   ]
+  },
+  {
+   "dev_id": 2648,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_mgk_fun75_8k_dm",
+   "displayName": "FUN75",
+   "company": "MonsGeek",
+   "platform": "ry5088",
+   "infor_id": [
+    88,
+    10
+   ]
+  },
+  {
+   "dev_id": 2650,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_sg9041_soc_8k_1k",
+   "displayName": "X68Ultra",
+   "company": "AttackShark",
+   "platform": "ry5088",
+   "infor_id": [
+    90,
+    10
+   ]
+  },
+  {
+   "dev_id": 2652,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_fq_x110a_3m_8k_8k",
+   "displayName": "DEEP80",
+   "company": "EWEADNV",
+   "platform": "ry5088",
+   "infor_id": [
+    92,
+    10
+   ]
+  },
+  {
+   "dev_id": 2653,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_fq_x110c_1m_8k",
+   "displayName": "DEEP80",
+   "company": "EWEADNV",
+   "platform": "ry5088",
+   "infor_id": [
+    93,
+    10
+   ]
+  },
+  {
+   "dev_id": 2660,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_sg9035_8k_1k_soc",
+   "displayName": "X87Ultra",
+   "company": "AttackShark",
+   "platform": "ry5088",
+   "infor_id": [
+    100,
+    10
+   ]
+  },
+  {
+   "dev_id": 2664,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_k268_dm_8k",
+   "displayName": "K268",
+   "company": "腹灵",
+   "platform": "ry5088",
+   "infor_id": [
+    104,
+    10
+   ]
+  },
+  {
+   "dev_id": 2666,
+   "vid": 12625,
+   "pid": 20530,
+   "name": "mouse_pan1076_m11_3311",
+   "displayName": "Epomaker Click Lite",
+   "company": "EPOMAKER",
+   "platform": "mouse",
+   "infor_id": [
+    106,
+    10
+   ]
+  },
+  {
+   "dev_id": 2669,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_k242_8k_8k",
+   "displayName": "GP75HE",
+   "company": "腹灵",
+   "platform": "ry5088",
+   "infor_id": [
+    109,
+    10
+   ]
+  },
+  {
+   "dev_id": 2671,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_zdm_xm_beat68elite_8k_1k",
+   "displayName": "Beat68-keyboard",
+   "company": "XinMengK65Keyboard",
+   "platform": "ry5088",
+   "infor_id": [
+    111,
+    10
+   ]
+  },
+  {
+   "dev_id": 2674,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_gk61_dm_8k",
+   "displayName": "GK61",
+   "company": "Skyloong",
+   "platform": "ry5088",
+   "infor_id": [
+    114,
+    10
+   ]
+  },
+  {
+   "dev_id": 2675,
+   "vid": 12625,
+   "pid": 20482,
+   "name": "yc3123_k81_soc",
+   "displayName": "K81",
+   "company": "rongyuan",
+   "platform": "yc3123",
+   "infor_id": [
+    115,
+    10
+   ]
+  },
+  {
+   "dev_id": 2677,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_nbd_mk902_3m_8k_1k",
+   "displayName": "Gaming Keyboard",
+   "company": "MageGee",
+   "platform": "ry5088",
+   "infor_id": [
+    117,
+    10
+   ]
+  },
+  {
+   "dev_id": 2679,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_m1v5heb_soc_8k_dfn4",
+   "displayName": "M1 V5 TMR",
+   "company": "MonsGeek",
+   "platform": "ry5088",
+   "infor_id": [
+    119,
+    10
+   ]
+  },
+  {
+   "dev_id": 2680,
+   "vid": 12625,
+   "pid": 20527,
+   "name": "ry5088_zdm_xm_beat68_3m_8k_8k",
+   "displayName": "Beat68-keyboard",
+   "company": "XinMengK65Keyboard",
+   "platform": "ry5088",
+   "infor_id": [
+    120,
+    10
+   ]
+  },
+  {
+   "dev_id": 2681,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_jz_gk68_dm_8k",
+   "displayName": "GK68",
+   "company": "Skyloong",
+   "platform": "ry5088",
+   "infor_id": [
+    121,
+    10
+   ]
+  },
+  {
+   "dev_id": 2683,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_mod007sv3he_dm_8k",
+   "displayName": "MOD007S V3-HE",
+   "company": "akko",
+   "platform": "ry5088",
+   "infor_id": [
+    123,
+    10
+   ]
+  },
+  {
+   "dev_id": 2688,
+   "vid": 12625,
+   "pid": 20517,
+   "name": "ry1086_chuangling_3m_1k",
+   "displayName": "F108",
+   "company": "NOPPOO",
+   "platform": "ry1086",
+   "infor_id": [
+    128,
+    10
+   ]
+  },
+  {
+   "dev_id": 2690,
+   "vid": 12625,
+   "pid": 20527,
+   "name": "ry5088_osd_dk82_3m_8k_8k",
+   "displayName": "DK82 HE",
+   "company": "rongyuan",
+   "platform": "ry5088",
+   "infor_id": [
+    130,
+    10
+   ]
+  },
+  {
+   "dev_id": 2694,
+   "vid": 12625,
+   "pid": 20517,
+   "name": "ry1086_cx_3m_1k",
+   "displayName": "C98 Pro",
+   "company": "NOPPOO",
+   "platform": "ry1086",
+   "infor_id": [
+    134,
+    10
+   ]
+  },
+  {
+   "dev_id": 2699,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_k2402_dm_8k",
+   "displayName": "Blend HE",
+   "company": "腹灵",
+   "platform": "ry5088",
+   "infor_id": [
+    139,
+    10
+   ]
+  },
+  {
+   "dev_id": 2700,
+   "vid": 14154,
+   "pid": 41538,
+   "name": "yc3123_nbd_mk25037_1M_1K",
+   "displayName": "Mecha 75",
+   "company": "VKMS",
+   "platform": "yc3123",
+   "infor_id": [
+    140,
+    10
+   ]
+  },
+  {
+   "dev_id": 2703,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_k258_8k_8k",
+   "displayName": "MK870 HE",
+   "company": "腹灵",
+   "platform": "ry5088",
+   "infor_id": [
+    143,
+    10
+   ]
+  },
+  {
+   "dev_id": 2704,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_mod007sv3he_uk_8k_dm",
+   "displayName": "MOD007S V3-HE UK",
+   "company": "akko",
+   "platform": "ry5088",
+   "infor_id": [
+    144,
+    10
+   ]
+  },
+  {
+   "dev_id": 2708,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_k239_8k_dm_uk",
+   "displayName": "K239 UK",
+   "company": "腹灵",
+   "platform": "ry5088",
+   "infor_id": [
+    148,
+    10
+   ]
+  },
+  {
+   "dev_id": 2709,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_hf_kf810_3m_8k_1k",
+   "displayName": "LK75",
+   "company": "gamakay2",
+   "platform": "ry5088",
+   "infor_id": [
+    149,
+    10
+   ]
+  },
+  {
+   "dev_id": 2710,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_x111a_3m_8k_8k",
+   "displayName": "DEEP68",
+   "company": "EWEADNV",
+   "platform": "ry5088",
+   "infor_id": [
+    150,
+    10
+   ]
+  },
+  {
+   "dev_id": 2711,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_x111c_1m_8k",
+   "displayName": "DEEP68",
+   "company": "EWEADNV",
+   "platform": "ry5088",
+   "infor_id": [
+    151,
+    10
+   ]
+  },
+  {
+   "dev_id": 2712,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_nbd_mk25022b_3m_8k_1k",
+   "displayName": "MK25022",
+   "company": "MageGee",
+   "platform": "ry5088",
+   "infor_id": [
+    152,
+    10
+   ]
+  },
+  {
+   "dev_id": 2721,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_veekosk0038_8k_8k",
+   "displayName": "Verve68",
+   "company": "MonsGeek",
+   "platform": "ry5088",
+   "infor_id": [
+    161,
+    10
+   ]
+  },
+  {
+   "dev_id": 2723,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_mopao_k67_1m_8k",
+   "displayName": "K67",
+   "company": "rongyuan",
+   "platform": "ry5088",
+   "infor_id": [
+    163,
+    10
+   ]
+  },
+  {
+   "dev_id": 2727,
+   "vid": 12625,
+   "pid": 20531,
+   "name": "ry5088_hc_gv10m_3m_8k",
+   "displayName": "GV10M-8K",
+   "company": "GVSTONE",
+   "platform": "ry5088",
+   "infor_id": [
+    167,
+    10
+   ]
+  },
+  {
+   "dev_id": 2729,
+   "vid": 12625,
+   "pid": 20524,
+   "name": "yc3121_k80d_dm_v300",
+   "displayName": "JEDEL KL166",
+   "company": "JEDEL",
+   "platform": "yc3121",
+   "infor_id": [
+    169,
+    10
+   ]
+  },
+  {
+   "dev_id": 2731,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_zmd_k982d_3m_1k",
+   "displayName": "K982D",
+   "company": "XinMengK65Keyboard",
+   "platform": "ry5088",
+   "infor_id": [
+    171,
+    10
+   ]
+  },
+  {
+   "dev_id": 2737,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_mk25031_dm_8k",
+   "displayName": "Lomz 75S",
+   "company": "rongyuan",
+   "platform": "ry5088",
+   "infor_id": [
+    177,
+    10
+   ]
+  },
+  {
+   "dev_id": 2739,
+   "vid": 12625,
+   "pid": 20482,
+   "name": "yc3123_mg108b_soc",
+   "displayName": "MG108B",
+   "company": "MonsGeek",
+   "platform": "yc3123",
+   "infor_id": [
+    179,
+    10
+   ]
+  },
+  {
+   "dev_id": 2740,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_nbd_mk25020_3m_8k_1k",
+   "displayName": "MK25020",
+   "company": "MageGee",
+   "platform": "ry5088",
+   "infor_id": [
+    180,
+    10
+   ]
+  },
+  {
+   "dev_id": 2743,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_k0026_8k_1k",
+   "displayName": "RAY68",
+   "company": "akko",
+   "platform": "ry5088",
+   "infor_id": [
+    183,
+    10
+   ]
+  },
+  {
+   "dev_id": 2746,
+   "vid": 12625,
+   "pid": 20527,
+   "name": "ry5088_sg9038_8k_8k",
+   "displayName": "NS67 PRO",
+   "company": "AJAZZMOUSE",
+   "platform": "ry5088",
+   "infor_id": [
+    186,
+    10
+   ]
+  },
+  {
+   "dev_id": 2749,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_k239_8k_dm",
+   "displayName": "K239 US",
+   "company": "腹灵",
+   "platform": "ry5088",
+   "infor_id": [
+    189,
+    10
+   ]
+  },
+  {
+   "dev_id": 2751,
+   "vid": 12625,
+   "pid": 20482,
+   "name": "yc3123_mk921_soc",
+   "displayName": "3MRGB-210",
+   "company": "ikbc",
+   "platform": "yc3123",
+   "infor_id": [
+    191,
+    10
+   ]
+  },
+  {
+   "dev_id": 2752,
+   "vid": 12625,
+   "pid": 20527,
+   "name": "ry5088_osd_dk82_uk_3m_8k_8k",
+   "displayName": "Nyf HE 82K",
+   "company": "NyfterUG",
+   "platform": "ry5088",
+   "infor_id": [
+    192,
+    10
+   ]
+  },
+  {
+   "dev_id": 2753,
+   "vid": 12625,
+   "pid": 20482,
+   "name": "yc3123_akko_5075bplus_3m_1k",
+   "displayName": "5075B Plus",
+   "company": "akko",
+   "platform": "yc3123",
+   "infor_id": [
+    193,
+    10
+   ]
+  },
+  {
+   "dev_id": 2755,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_sg9041_dm_8k",
+   "displayName": "X68MAX",
+   "company": "AttackShark",
+   "platform": "ry5088",
+   "infor_id": [
+    195,
+    10
+   ]
+  },
+  {
+   "dev_id": 2756,
+   "vid": 12625,
+   "pid": 20527,
+   "name": "ry5088_sg8995_3m_8k_1k",
+   "displayName": "R75PROHE",
+   "company": "AttackShark",
+   "platform": "ry5088",
+   "infor_id": [
+    196,
+    10
+   ]
+  },
+  {
+   "dev_id": 2757,
+   "vid": 14154,
+   "pid": 41526,
+   "name": "ry5088_fq_x82vk_nb68max_3m_8k_8k",
+   "displayName": "NB68 Max",
+   "company": "VKMS",
+   "platform": "ry5088",
+   "infor_id": [
+    197,
+    10
+   ]
+  },
+  {
+   "dev_id": 2759,
+   "vid": 14234,
+   "pid": 6149,
+   "name": "yc3123_k2505_3m_1k_soc",
+   "displayName": "HTK3180UA",
+   "company": "Hator",
+   "platform": "yc3123",
+   "infor_id": [
+    199,
+    10
+   ]
+  },
+  {
+   "dev_id": 2761,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_hf_kf109_3m_8k_1k",
+   "displayName": "HE68 Llte",
+   "company": "EPOMAKER",
+   "platform": "ry5088",
+   "infor_id": [
+    201,
+    10
+   ]
+  },
+  {
+   "dev_id": 2762,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_hf_kf109_1m_8k",
+   "displayName": "HE68 Llte",
+   "company": "EPOMAKER",
+   "platform": "ry5088",
+   "infor_id": [
+    202,
+    10
+   ]
+  },
+  {
+   "dev_id": 2763,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_gzs_mk129us_1m_8k",
+   "displayName": "MK129",
+   "company": "rongyuan",
+   "platform": "ry5088",
+   "infor_id": [
+    203,
+    10
+   ]
+  },
+  {
+   "dev_id": 2764,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_dyh_cz61_dm_8k",
+   "displayName": "H60Pro",
+   "company": "BOYIH60",
+   "platform": "ry5088",
+   "infor_id": [
+    204,
+    10
+   ]
+  },
+  {
+   "dev_id": 2766,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_sg9000_3m_8k_1k",
+   "displayName": "MK-23",
+   "company": "rongyuan",
+   "platform": "ry5088",
+   "infor_id": [
+    206,
+    10
+   ]
+  },
+  {
+   "dev_id": 2769,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_zdm_zyl_x85ultra_8k_1k_3m",
+   "displayName": "X85Ultra",
+   "company": "AttackShark",
+   "platform": "ry5088",
+   "infor_id": [
+    209,
+    10
+   ]
+  },
+  {
+   "dev_id": 2770,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_zdm_beat75v2_8k_8k_3m",
+   "displayName": "Beat75",
+   "company": "XinMengK65Keyboard",
+   "platform": "ry5088",
+   "infor_id": [
+    210,
+    10
+   ]
+  },
+  {
+   "dev_id": 2771,
+   "vid": 12625,
+   "pid": 20482,
+   "name": "yc3123_k81jd_soc",
+   "displayName": "JEDELWKL100",
+   "company": "JEDEL",
+   "platform": "yc3123",
+   "infor_id": [
+    211,
+    10
+   ]
+  },
+  {
+   "dev_id": 2772,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_sg8992_3m_8k_1k",
+   "displayName": "SG8992",
+   "company": "rongyuan",
+   "platform": "ry5088",
+   "infor_id": [
+    212,
+    10
+   ]
+  },
+  {
+   "dev_id": 2773,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_xz_wooting60he_1m_8k",
+   "displayName": "GT60",
+   "company": "GT60",
+   "platform": "ry5088",
+   "infor_id": [
+    213,
+    10
+   ]
+  },
+  {
+   "dev_id": 2774,
+   "vid": 14234,
+   "pid": 6149,
+   "name": "yc3123_k2505_1m_1k_soc",
+   "displayName": "HTK1180UA",
+   "company": "Hator",
+   "platform": "yc3123",
+   "infor_id": [
+    214,
+    10
+   ]
+  },
+  {
+   "dev_id": 2775,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_nbd_mk25023_3m_8k_1k",
+   "displayName": "Gaming Keyboard",
+   "company": "MageGee",
+   "platform": "ry5088",
+   "infor_id": [
+    215,
+    10
+   ]
+  },
+  {
+   "dev_id": 2776,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_sg8905_3m_8k_1k",
+   "displayName": "SG8905",
+   "company": "rongyuan",
+   "platform": "ry5088",
+   "infor_id": [
+    216,
+    10
+   ]
+  },
+  {
+   "dev_id": 2780,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_sg8948j_dm_8k_002",
+   "displayName": "N-J100",
+   "company": "sunsonny",
+   "platform": "ry5088",
+   "infor_id": [
+    220,
+    10
+   ]
+  },
+  {
+   "dev_id": 2781,
+   "vid": 12625,
+   "pid": 20527,
+   "name": "ry5088_jc_gk6980gw_8k_8k",
+   "displayName": "Neon75",
+   "company": "VGNNEON",
+   "platform": "ry5088",
+   "infor_id": [
+    221,
+    10
+   ]
+  },
+  {
+   "dev_id": 2782,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_akko_tac75he_8k_dm",
+   "displayName": "TAC75 HE",
+   "company": "akko",
+   "platform": "ry5088",
+   "infor_id": [
+    222,
+    10
+   ]
+  },
+  {
+   "dev_id": 2785,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_akko_fun60_3m_8k_1k",
+   "displayName": "FUN60 PRO",
+   "company": "MonsGeek",
+   "platform": "ry5088",
+   "infor_id": [
+    225,
+    10
+   ]
+  },
+  {
+   "dev_id": 2786,
+   "vid": 12625,
+   "pid": 20482,
+   "name": "yc3123_5087sv3_8k_1k",
+   "displayName": "TAC87",
+   "company": "akko",
+   "platform": "yc3123",
+   "infor_id": [
+    226,
+    10
+   ]
+  },
+  {
+   "dev_id": 2789,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_nbd_mk25022jp_3m_8k_1k_1k",
+   "displayName": "CAPTAIN87",
+   "company": "MageGee",
+   "platform": "ry5088",
+   "infor_id": [
+    229,
+    10
+   ]
+  },
+  {
+   "dev_id": 2790,
+   "vid": 12625,
+   "pid": 20524,
+   "name": "yc3121_mk606_gkx68_dm_v300",
+   "displayName": "GKX68",
+   "company": "GKX68MAGNUM",
+   "platform": "yc3121",
+   "infor_id": [
+    230,
+    10
+   ]
+  },
+  {
+   "dev_id": 2791,
+   "vid": 14234,
+   "pid": 6147,
+   "name": "ry5088_k2404_uk_3m_8k_8k",
+   "displayName": "GEO65HE",
+   "company": "Hator",
+   "platform": "ry5088",
+   "infor_id": [
+    231,
+    10
+   ]
+  },
+  {
+   "dev_id": 2792,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_sg_sg9009_3m_8k_1k",
+   "displayName": "X96HE",
+   "company": "AttackShark",
+   "platform": "ry5088",
+   "infor_id": [
+    232,
+    10
+   ]
+  },
+  {
+   "dev_id": 2793,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_sg8967_8k_1k",
+   "displayName": "R86PROHE",
+   "company": "AttackShark",
+   "platform": "ry5088",
+   "infor_id": [
+    233,
+    10
+   ]
+  },
+  {
+   "dev_id": 2795,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_zdm_k980_8k_1k",
+   "displayName": "K980",
+   "company": "XinMengK65Keyboard",
+   "platform": "ry5088",
+   "infor_id": [
+    235,
+    10
+   ]
+  },
+  {
+   "dev_id": 2796,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_sg9023b_dm_8k_002",
+   "displayName": "RK-X44-67",
+   "company": "WINSTAR",
+   "platform": "ry5088",
+   "infor_id": [
+    236,
+    10
+   ]
+  },
+  {
+   "dev_id": 2797,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_zdm_beat75v2_8k_dm",
+   "displayName": "Beat75",
+   "company": "XinMengK65Keyboard",
+   "platform": "ry5088",
+   "infor_id": [
+    237,
+    10
+   ]
+  },
+  {
+   "dev_id": 2798,
+   "vid": 12625,
+   "pid": 20527,
+   "name": "ry5088_zdm_r82_8k_1k",
+   "displayName": "R82PROHE",
+   "company": "AttackShark",
+   "platform": "ry5088",
+   "infor_id": [
+    238,
+    10
+   ]
+  },
+  {
+   "dev_id": 2799,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_qxz_seek82_8k_1k",
+   "displayName": "SEEK75",
+   "company": "EWEADNV",
+   "platform": "ry5088",
+   "infor_id": [
+    239,
+    10
+   ]
+  },
+  {
+   "dev_id": 2800,
+   "vid": 14234,
+   "pid": 6147,
+   "name": "ry5088_k2505_8k_8k",
+   "displayName": "HTK3880UA",
+   "company": "Hator",
+   "platform": "ry5088",
+   "infor_id": [
+    240,
+    10
+   ]
+  },
+  {
+   "dev_id": 2801,
+   "vid": 12625,
+   "pid": 20531,
+   "name": "ry5088_gv8m_8k_machine",
+   "displayName": "GV8M-8K",
+   "company": "GVSTONE",
+   "platform": "ry5088",
+   "infor_id": [
+    241,
+    10
+   ]
+  },
+  {
+   "dev_id": 2802,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_kf304_dm_8k",
+   "displayName": "SUPER75",
+   "company": "SUPER68",
+   "platform": "ry5088",
+   "infor_id": [
+    242,
+    10
+   ]
+  },
+  {
+   "dev_id": 2804,
+   "vid": 12625,
+   "pid": 20482,
+   "name": "yc3123_sg9045_soc",
+   "displayName": "X820Ultra",
+   "company": "AttackShark",
+   "platform": "yc3123",
+   "infor_id": [
+    244,
+    10
+   ]
+  },
+  {
+   "dev_id": 2806,
+   "vid": 14234,
+   "pid": 6147,
+   "name": "ry5088_k2405_uk_3m_8k_8k",
+   "displayName": "K2405",
+   "company": "Hator",
+   "platform": "ry5088",
+   "infor_id": [
+    246,
+    10
+   ]
+  },
+  {
+   "dev_id": 2807,
+   "vid": 12625,
+   "pid": 20527,
+   "name": "ry5088_akko5075b_3m_8k_1k_1049es",
+   "displayName": "5075B V2 HE",
+   "company": "akko",
+   "platform": "ry5088",
+   "infor_id": [
+    247,
+    10
+   ]
+  },
+  {
+   "dev_id": 2808,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_hf_kf810_ry1049es_8k_1k",
+   "displayName": "LK75",
+   "company": "gamakay2",
+   "platform": "ry5088",
+   "infor_id": [
+    248,
+    10
+   ]
+  },
+  {
+   "dev_id": 2809,
+   "vid": 12625,
+   "pid": 20482,
+   "name": "yc3123_mk885a_soc",
+   "displayName": "3MRGB-258",
+   "company": "ikbc",
+   "platform": "yc3123",
+   "infor_id": [
+    249,
+    10
+   ]
+  },
+  {
+   "dev_id": 2810,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_sg9038_8k_dm",
+   "displayName": "NS67",
+   "company": "AJAZZMOUSE",
+   "platform": "ry5088",
+   "infor_id": [
+    250,
+    10
+   ]
+  },
+  {
+   "dev_id": 2811,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_akko_fun68_8k_8k_3m",
+   "displayName": "FUN68",
+   "company": "MonsGeek",
+   "platform": "ry5088",
+   "infor_id": [
+    251,
+    10
+   ]
+  },
+  {
+   "dev_id": 2816,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_nbd_mk25033_stom68_1m_8k",
+   "displayName": "Storm68",
+   "company": "TITANHUB",
+   "platform": "ry5088",
+   "infor_id": [
+    0,
+    11
+   ]
+  },
+  {
+   "dev_id": 2817,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "yc3123_osd_k986_3m_1k_soc",
+   "displayName": "PLUX CST KB",
+   "company": "PLUXKB",
+   "platform": "yc3123",
+   "infor_id": [
+    1,
+    11
+   ]
+  },
+  {
+   "dev_id": 2818,
+   "vid": 12625,
+   "pid": 20530,
+   "name": "mouse_xm_ms301_1k_1k_3m",
+   "displayName": "MS301",
+   "company": "XinMengK65Keyboard",
+   "platform": "mouse",
+   "infor_id": [
+    2,
+    11
+   ]
+  },
+  {
+   "dev_id": 2819,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_akko_m1v5_3m_8k_8k",
+   "displayName": "M1 V5 HE",
+   "company": "MonsGeek",
+   "platform": "ry5088",
+   "infor_id": [
+    3,
+    11
+   ]
+  },
+  {
+   "dev_id": 2820,
+   "vid": 12625,
+   "pid": 20531,
+   "name": "ry5088_mk806b_8k_machine",
+   "displayName": "Gaming Keyboard",
+   "company": "GKX68MAGNUM",
+   "platform": "ry5088",
+   "infor_id": [
+    4,
+    11
+   ]
+  },
+  {
+   "dev_id": 2821,
+   "vid": 12625,
+   "pid": 20517,
+   "name": "pan1086_k77_k98_soc",
+   "displayName": "K98Pro",
+   "company": "K98Pro",
+   "platform": "pan1086",
+   "infor_id": [
+    5,
+    11
+   ]
+  },
+  {
+   "dev_id": 2823,
+   "vid": 14234,
+   "pid": 6149,
+   "name": "yc3123_k2506mxc_ua_soc",
+   "displayName": "HTK3160UA",
+   "company": "Hator",
+   "platform": "yc3123",
+   "infor_id": [
+    7,
+    11
+   ]
+  },
+  {
+   "dev_id": 2827,
+   "vid": 12625,
+   "pid": 20530,
+   "name": "mouse_pan1076_ms302_1k_1k_3m",
+   "displayName": "A5",
+   "company": "FREEWOLF",
+   "platform": "mouse",
+   "infor_id": [
+    11,
+    11
+   ]
+  },
+  {
+   "dev_id": 2828,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_mk25032_8k_dm",
+   "displayName": "Lomz 75S",
+   "company": "LOMZHUBWEB",
+   "platform": "ry5088",
+   "infor_id": [
+    12,
+    11
+   ]
+  },
+  {
+   "dev_id": 2829,
+   "vid": 12625,
+   "pid": 20527,
+   "name": "ry5088_akko_5087b_3m_8k_1k",
+   "displayName": "5087B V2 HE",
+   "company": "akko",
+   "platform": "ry5088",
+   "infor_id": [
+    13,
+    11
+   ]
+  },
+  {
+   "dev_id": 2831,
+   "vid": 14154,
+   "pid": 41497,
+   "name": "ry5088_fq_vk99_8k_8k",
+   "displayName": "VK99 Gaming",
+   "company": "VKMS",
+   "platform": "ry5088",
+   "infor_id": [
+    15,
+    11
+   ]
+  },
+  {
+   "dev_id": 2832,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_shine60_8k_1k",
+   "displayName": "Shine60",
+   "company": "Veekos",
+   "platform": "ry5088",
+   "infor_id": [
+    16,
+    11
+   ]
+  },
+  {
+   "dev_id": 2833,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_sg9041_3m_8k_1k",
+   "displayName": "X68Ultra",
+   "company": "AttackShark",
+   "platform": "ry5088",
+   "infor_id": [
+    17,
+    11
+   ]
+  },
+  {
+   "dev_id": 2834,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_nbd_mk825_1m_8k",
+   "displayName": "Gaming Keyboard",
+   "company": "YUNZII",
+   "platform": "ry5088",
+   "infor_id": [
+    18,
+    11
+   ]
+  },
+  {
+   "dev_id": 2835,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_sg9004_8k_1k",
+   "displayName": "EK368RT",
+   "company": "EDRA",
+   "platform": "ry5088",
+   "infor_id": [
+    19,
+    11
+   ]
+  },
+  {
+   "dev_id": 2836,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_shine60_dm_8k",
+   "displayName": "Shine60",
+   "company": "Veekos",
+   "platform": "ry5088",
+   "infor_id": [
+    20,
+    11
+   ]
+  },
+  {
+   "dev_id": 2839,
+   "vid": 12625,
+   "pid": 20527,
+   "name": "ry5088_akko_mod007_v5_3m_8k_8k",
+   "displayName": "MOD007 V5 HE",
+   "company": "akko",
+   "platform": "ry5088",
+   "infor_id": [
+    23,
+    11
+   ]
+  },
+  {
+   "dev_id": 2843,
+   "vid": 12625,
+   "pid": 16422,
+   "name": "mouse_pan1080_ksn_m607_3950_1k_8k",
+   "displayName": "SPIRIT Pro Gaming Mouse",
+   "company": "SPIRITProSoftware",
+   "platform": "mouse",
+   "infor_id": [
+    27,
+    11
+   ]
+  },
+  {
+   "dev_id": 2844,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_zdm_r82_dm",
+   "displayName": "R82HE",
+   "company": "AttackShark",
+   "platform": "ry5088",
+   "infor_id": [
+    28,
+    11
+   ]
+  },
+  {
+   "dev_id": 2845,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_akko_m2v5_3m_8k_8k",
+   "displayName": "M2 V5 HE",
+   "company": "MonsGeek",
+   "platform": "ry5088",
+   "infor_id": [
+    29,
+    11
+   ]
+  },
+  {
+   "dev_id": 2848,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_nbd_mk826_1m_8k",
+   "displayName": "Gaming Keyboard",
+   "company": "MageGee",
+   "platform": "ry5088",
+   "infor_id": [
+    32,
+    11
+   ]
+  },
+  {
+   "dev_id": 2852,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_sg9035_3m_8k_1k",
+   "displayName": "X87Ultra",
+   "company": "AttackShark",
+   "platform": "ry5088",
+   "infor_id": [
+    36,
+    11
+   ]
+  },
+  {
+   "dev_id": 2853,
+   "vid": 14234,
+   "pid": 6147,
+   "name": "ry5088_k2505he_ua_1m_8k",
+   "displayName": "HTK1880UA",
+   "company": "Hator",
+   "platform": "ry5088",
+   "infor_id": [
+    37,
+    11
+   ]
+  },
+  {
+   "dev_id": 2854,
+   "vid": 12625,
+   "pid": 20517,
+   "name": "pan1086_yumi17_3m_1k",
+   "displayName": "yumi17",
+   "company": "凯酷",
+   "platform": "pan1086",
+   "infor_id": [
+    38,
+    11
+   ]
+  },
+  {
+   "dev_id": 2855,
+   "vid": 12625,
+   "pid": 20517,
+   "name": "pan1086_yumi68_soc",
+   "displayName": "Yumi68",
+   "company": "凯酷",
+   "platform": "pan1086",
+   "infor_id": [
+    39,
+    11
+   ]
+  },
+  {
+   "dev_id": 2856,
+   "vid": 14234,
+   "pid": 6147,
+   "name": "ry5088_k2505he_ua_1m_8k",
+   "displayName": "HTK1880",
+   "company": "Hator",
+   "platform": "ry5088",
+   "infor_id": [
+    40,
+    11
+   ]
+  },
+  {
+   "dev_id": 2857,
+   "vid": 14234,
+   "pid": 6147,
+   "name": "ry5088_k2505_8k_8k",
+   "displayName": "HTK3880",
+   "company": "Hator",
+   "platform": "ry5088",
+   "infor_id": [
+    41,
+    11
+   ]
+  },
+  {
+   "dev_id": 2858,
+   "vid": 14234,
+   "pid": 6147,
+   "name": "ry5088_k2505hee_8k_uk",
+   "displayName": "HTK3880EU",
+   "company": "Hator",
+   "platform": "ry5088",
+   "infor_id": [
+    42,
+    11
+   ]
+  },
+  {
+   "dev_id": 2859,
+   "vid": 12625,
+   "pid": 20527,
+   "name": "ry5088_jc_gk8640w_8k_8k",
+   "displayName": "Neon75",
+   "company": "VGNNEON",
+   "platform": "ry5088",
+   "infor_id": [
+    43,
+    11
+   ]
+  },
+  {
+   "dev_id": 2861,
+   "vid": 14234,
+   "pid": 6150,
+   "name": "yc3123_k2505_soc",
+   "displayName": "HTK4180UA",
+   "company": "Hator",
+   "platform": "yc3123",
+   "infor_id": [
+    45,
+    11
+   ]
+  },
+  {
+   "dev_id": 2862,
+   "vid": 14234,
+   "pid": 6149,
+   "name": "yc3123_k2505uk_3m_1k_soc",
+   "displayName": "HTK4180EU",
+   "company": "Hator",
+   "platform": "yc3123",
+   "infor_id": [
+    46,
+    11
+   ]
+  },
+  {
+   "dev_id": 2864,
+   "vid": 12625,
+   "pid": 20482,
+   "name": "yc3123_zyl_x85max_3m_1k",
+   "displayName": "X85MAX",
+   "company": "AttackShark",
+   "platform": "yc3123",
+   "infor_id": [
+    48,
+    11
+   ]
+  },
+  {
+   "dev_id": 2865,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_zmd_k982d_3m_8k_1k",
+   "displayName": "RT75PRO",
+   "company": "YUNZII",
+   "platform": "ry5088",
+   "infor_id": [
+    49,
+    11
+   ]
+  },
+  {
+   "dev_id": 2866,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_yh_h60_1m_8k",
+   "displayName": "H60",
+   "company": "SPYSELF",
+   "platform": "ry5088",
+   "infor_id": [
+    50,
+    11
+   ]
+  },
+  {
+   "dev_id": 2869,
+   "vid": 12625,
+   "pid": 20526,
+   "name": "yc3121_k242uk_3m_1k_1k",
+   "displayName": "GP75HE",
+   "company": "腹灵",
+   "platform": "yc3121",
+   "infor_id": [
+    53,
+    11
+   ]
+  },
+  {
+   "dev_id": 2870,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_epomaker65_dm_8k",
+   "displayName": "Epomaker 65",
+   "company": "EPOMAKER",
+   "platform": "ry5088",
+   "infor_id": [
+    54,
+    11
+   ]
+  },
+  {
+   "dev_id": 2873,
+   "vid": 12625,
+   "pid": 20545,
+   "name": "pan1086_spm_pl108w_soc",
+   "displayName": "PL108W",
+   "company": "SPMControls",
+   "platform": "pan1086",
+   "infor_id": [
+    57,
+    11
+   ]
+  },
+  {
+   "dev_id": 2874,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_akko_m3v5_3m_8k_8k",
+   "displayName": "M3 V5 HE",
+   "company": "MonsGeek",
+   "platform": "ry5088",
+   "infor_id": [
+    58,
+    11
+   ]
+  },
+  {
+   "dev_id": 2875,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_dyh_cz61_dm_8k_uk",
+   "displayName": "H60Pro",
+   "company": "BOYIH60",
+   "platform": "ry5088",
+   "infor_id": [
+    59,
+    11
+   ]
+  },
+  {
+   "dev_id": 2876,
+   "vid": 14234,
+   "pid": 6147,
+   "name": "ry5088_k2506he_c_3m_8k_8k",
+   "displayName": "HTK3860UA",
+   "company": "Hator",
+   "platform": "ry5088",
+   "infor_id": [
+    60,
+    11
+   ]
+  },
+  {
+   "dev_id": 2879,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_hf_kf068_1m_8k",
+   "displayName": "SUPER68",
+   "company": "SUPER68",
+   "platform": "ry5088",
+   "infor_id": [
+    63,
+    11
+   ]
+  },
+  {
+   "dev_id": 2881,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_k0039_8k_1k",
+   "displayName": "K0039",
+   "company": "akko",
+   "platform": "ry5088",
+   "infor_id": [
+    65,
+    11
+   ]
+  },
+  {
+   "dev_id": 2883,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_hf_kf109_1m_8k",
+   "displayName": "HE68 Llte",
+   "company": "EPOMAKER",
+   "platform": "ry5088",
+   "infor_id": [
+    67,
+    11
+   ]
+  },
+  {
+   "dev_id": 2884,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_qxz_seek82_8k_dm",
+   "displayName": "SEEK75",
+   "company": "EWEADNV",
+   "platform": "ry5088",
+   "infor_id": [
+    68,
+    11
+   ]
+  },
+  {
+   "dev_id": 2885,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_mjk_mineral02_8k_8k",
+   "displayName": "Mineral02",
+   "company": "akko",
+   "platform": "ry5088",
+   "infor_id": [
+    69,
+    11
+   ]
+  },
+  {
+   "dev_id": 2886,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_wa_mmdkm29c_1m_8k_ry1049e",
+   "displayName": "Cybrix29",
+   "company": "KiiBoom",
+   "platform": "ry5088",
+   "infor_id": [
+    70,
+    11
+   ]
+  },
+  {
+   "dev_id": 2887,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_nbd_mk25023a_3m_8k_1k",
+   "displayName": "Gaming Keyboard",
+   "company": "MageGee",
+   "platform": "ry5088",
+   "infor_id": [
+    71,
+    11
+   ]
+  },
+  {
+   "dev_id": 2888,
+   "vid": 12625,
+   "pid": 20545,
+   "name": "pan1086_gkg108_soc",
+   "displayName": "GKG108",
+   "company": "GEEKSTARControls",
+   "platform": "pan1086",
+   "infor_id": [
+    72,
+    11
+   ]
+  },
+  {
+   "dev_id": 2892,
+   "vid": 12625,
+   "pid": 20527,
+   "name": "ry5088_x87a_dy_8k_8k_002",
+   "displayName": "Gaming Keyboard",
+   "company": "rongyuan",
+   "platform": "ry5088",
+   "infor_id": [
+    76,
+    11
+   ]
+  },
+  {
+   "dev_id": 2893,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_sy857_3m_8k_1k",
+   "displayName": "KM9",
+   "company": "Acrox",
+   "platform": "ry5088",
+   "infor_id": [
+    77,
+    11
+   ]
+  },
+  {
+   "dev_id": 2895,
+   "vid": 12625,
+   "pid": 20482,
+   "name": "yc3123_ss_sn001",
+   "displayName": "RT85",
+   "company": "EPOMAKER",
+   "platform": "yc3123",
+   "infor_id": [
+    79,
+    11
+   ]
+  },
+  {
+   "dev_id": 2896,
+   "vid": 12625,
+   "pid": 20482,
+   "name": "yc3123_cx_3m_1k",
+   "displayName": "X68",
+   "company": "NOPPOO",
+   "platform": "yc3123",
+   "infor_id": [
+    80,
+    11
+   ]
+  },
+  {
+   "dev_id": 2897,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_hf_kf109_ak8668_1m_8k",
+   "displayName": "X68 Pro",
+   "company": "rongyuan",
+   "platform": "ry5088",
+   "infor_id": [
+    81,
+    11
+   ]
+  },
+  {
+   "dev_id": 2899,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_nbd_mk25051b_1m_8k",
+   "displayName": "Gaming Keyboard",
+   "company": "rongyuan",
+   "platform": "ry5088",
+   "infor_id": [
+    83,
+    11
+   ]
+  },
+  {
+   "dev_id": 2901,
+   "vid": 12625,
+   "pid": 20527,
+   "name": "ry5088_x68v2_8k",
+   "displayName": "X68PRO HE",
+   "company": "AttackShark",
+   "platform": "ry5088",
+   "infor_id": [
+    85,
+    11
+   ]
+  },
+  {
+   "dev_id": 2902,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_x68v2_8k_dm",
+   "displayName": "X68HE",
+   "company": "AttackShark",
+   "platform": "ry5088",
+   "infor_id": [
+    86,
+    11
+   ]
+  },
+  {
+   "dev_id": 2903,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_mjk_mineral01_8k_8k",
+   "displayName": "Mineral01",
+   "company": "akko",
+   "platform": "ry5088",
+   "infor_id": [
+    87,
+    11
+   ]
+  },
+  {
+   "dev_id": 2904,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_jc_gk8640g_1m_8k",
+   "displayName": "Neon75",
+   "company": "VGNNEON",
+   "platform": "ry5088",
+   "infor_id": [
+    88,
+    11
+   ]
+  },
+  {
+   "dev_id": 2905,
+   "vid": 12625,
+   "pid": 20527,
+   "name": "ry5088_jc_gk8640w_ulter_3m_8k_8k",
+   "displayName": "Neon75",
+   "company": "VGNNEON",
+   "platform": "ry5088",
+   "infor_id": [
+    89,
+    11
+   ]
+  },
+  {
+   "dev_id": 2906,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_fq_x110v2_b_deep80_1m_8k",
+   "displayName": "DEEP80",
+   "company": "EWEADNV",
+   "platform": "ry5088",
+   "infor_id": [
+    90,
+    11
+   ]
+  },
+  {
+   "dev_id": 2907,
+   "vid": 12625,
+   "pid": 20517,
+   "name": "pan1086_k77_tk101_soc",
+   "displayName": "TK101",
+   "company": "gamakay2",
+   "platform": "pan1086",
+   "infor_id": [
+    91,
+    11
+   ]
+  },
+  {
+   "dev_id": 2909,
+   "vid": 14234,
+   "pid": 6149,
+   "name": "yc3123_k2506mxa_1m_1k_soc",
+   "displayName": "HTK1160UA",
+   "company": "Hator",
+   "platform": "yc3123",
+   "infor_id": [
+    93,
+    11
+   ]
+  },
+  {
+   "dev_id": 2910,
+   "vid": 14234,
+   "pid": 6150,
+   "name": "yc3123_k2506mxe_3m_1k_soc",
+   "displayName": "HTK4160UA",
+   "company": "Hator",
+   "platform": "yc3123",
+   "infor_id": [
+    94,
+    11
+   ]
+  },
+  {
+   "dev_id": 2912,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_zw_gmk82jp_1m_8k",
+   "displayName": "GMK-82",
+   "company": "GTUNE",
+   "platform": "ry5088",
+   "infor_id": [
+    96,
+    11
+   ]
+  },
+  {
+   "dev_id": 2914,
+   "vid": 12625,
+   "pid": 20538,
+   "name": "mouse_ry6608_g11_3395_8k_8k",
+   "displayName": "M5 PRO",
+   "company": "VKMS",
+   "platform": "mouse",
+   "infor_id": [
+    98,
+    11
+   ]
+  },
+  {
+   "dev_id": 2916,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_bd_jk82_3m_8k_1k",
+   "displayName": "JK82-1",
+   "company": "SUNROSE",
+   "platform": "ry5088",
+   "infor_id": [
+    100,
+    11
+   ]
+  },
+  {
+   "dev_id": 2917,
+   "vid": 14234,
+   "pid": 6147,
+   "name": "ry5088_k2506he_a_ua_8k_dm",
+   "displayName": "HTK1860UA",
+   "company": "Hator",
+   "platform": "ry5088",
+   "infor_id": [
+    101,
+    11
+   ]
+  },
+  {
+   "dev_id": 2918,
+   "vid": 14234,
+   "pid": 6147,
+   "name": "ry5088_k2506he_b_us_8k_dm",
+   "displayName": "HTK1860",
+   "company": "Hator",
+   "platform": "ry5088",
+   "infor_id": [
+    102,
+    11
+   ]
+  },
+  {
+   "dev_id": 2919,
+   "vid": 14234,
+   "pid": 6147,
+   "name": "ry5088_k2506he_c_3m_8k_8k",
+   "displayName": "HTK3860",
+   "company": "Hator",
+   "platform": "ry5088",
+   "infor_id": [
+    103,
+    11
+   ]
+  },
+  {
+   "dev_id": 2920,
+   "vid": 14234,
+   "pid": 6147,
+   "name": "ry5088_k2506hee_uk_3m_8k_8k",
+   "displayName": "HTK3860EU",
+   "company": "Hator",
+   "platform": "ry5088",
+   "infor_id": [
+    104,
+    11
+   ]
+  },
+  {
+   "dev_id": 2922,
+   "vid": 12625,
+   "pid": 20482,
+   "name": "yc3123_kk_y98_3m_1k_rgb_kb_soc",
+   "displayName": "Y98",
+   "company": "凯酷",
+   "platform": "yc3123",
+   "infor_id": [
+    106,
+    11
+   ]
+  },
+  {
+   "dev_id": 2923,
+   "vid": 12625,
+   "pid": 20482,
+   "name": "yc3123_nbd_mk830_al75_3m_1k_soc",
+   "displayName": "AL75 PRO",
+   "company": "YUNZII",
+   "platform": "yc3123",
+   "infor_id": [
+    107,
+    11
+   ]
+  },
+  {
+   "dev_id": 2924,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_k0026_8k_dm",
+   "displayName": "RAY68",
+   "company": "akko",
+   "platform": "ry5088",
+   "infor_id": [
+    108,
+    11
+   ]
+  },
+  {
+   "dev_id": 2925,
+   "vid": 12625,
+   "pid": 20482,
+   "name": "yc3123_lj_xl98_soc",
+   "displayName": "XL98",
+   "company": "ROYALAXE",
+   "platform": "yc3123",
+   "infor_id": [
+    109,
+    11
+   ]
+  },
+  {
+   "dev_id": 2928,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_zdm_beat75v2_8k_dm",
+   "displayName": "B75",
+   "company": "蝴蝶",
+   "platform": "ry5088",
+   "infor_id": [
+    112,
+    11
+   ]
+  },
+  {
+   "dev_id": 2929,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_nbd_mk666v2_1m_8k",
+   "displayName": "X60",
+   "company": "AttackShark",
+   "platform": "ry5088",
+   "infor_id": [
+    113,
+    11
+   ]
+  },
+  {
+   "dev_id": 2930,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_sg_sg8948_1m_8k",
+   "displayName": "MK160B MAX",
+   "company": "Gamepro",
+   "platform": "ry5088",
+   "infor_id": [
+    114,
+    11
+   ]
+  },
+  {
+   "dev_id": 2931,
+   "vid": 12625,
+   "pid": 20482,
+   "name": "yc3123_ak8752_soc",
+   "displayName": "YZ75 MAX",
+   "company": "YUNZII",
+   "platform": "yc3123",
+   "infor_id": [
+    115,
+    11
+   ]
+  },
+  {
+   "dev_id": 2932,
+   "vid": 12625,
+   "pid": 20524,
+   "name": "yc3121_k80dsl_dm_v300",
+   "displayName": "SHOT209",
+   "company": "SALPIDO",
+   "platform": "yc3121",
+   "infor_id": [
+    116,
+    11
+   ]
+  },
+  {
+   "dev_id": 2936,
+   "vid": 12625,
+   "pid": 20482,
+   "name": "yc3123_fl_k2507mxe_soc",
+   "displayName": "HTK4100UA",
+   "company": "Hator",
+   "platform": "yc3123",
+   "infor_id": [
+    120,
+    11
+   ]
+  },
+  {
+   "dev_id": 2938,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_sg_sg9006_3m_8k_1k",
+   "displayName": "X65PRO",
+   "company": "AttackShark",
+   "platform": "ry5088",
+   "infor_id": [
+    122,
+    11
+   ]
+  },
+  {
+   "dev_id": 2939,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_mk825_dm_hall_8k",
+   "displayName": "MATATAKI (US)",
+   "company": "AIM1Keys",
+   "platform": "ry5088",
+   "infor_id": [
+    123,
+    11
+   ]
+  },
+  {
+   "dev_id": 2942,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_sg_sg9023_1m_8k",
+   "displayName": "X65",
+   "company": "AttackShark",
+   "platform": "ry5088",
+   "infor_id": [
+    126,
+    11
+   ]
+  },
+  {
+   "dev_id": 2943,
+   "vid": 12625,
+   "pid": 20482,
+   "name": "yc3123_fl_k245_3m_1k_soc",
+   "displayName": "NX87PRO",
+   "company": "腹灵",
+   "platform": "yc3123",
+   "infor_id": [
+    127,
+    11
+   ]
+  },
+  {
+   "dev_id": 2949,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_akko_m1v5he_3m_8k_8k",
+   "displayName": "M1 V5 TMR",
+   "company": "MonsGeek",
+   "platform": "ry5088",
+   "infor_id": [
+    133,
+    11
+   ]
+  },
+  {
+   "dev_id": 2955,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_fq_x111v2_deep68_1m_8k",
+   "displayName": "Deep68",
+   "company": "EWEADNV",
+   "platform": "ry5088",
+   "infor_id": [
+    139,
+    11
+   ]
+  },
+  {
+   "dev_id": 2957,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_k228_8k_dm",
+   "displayName": "GP87HE",
+   "company": "DNS",
+   "platform": "ry5088",
+   "infor_id": [
+    141,
+    11
+   ]
+  },
+  {
+   "dev_id": 2958,
+   "vid": 12625,
+   "pid": 20482,
+   "name": "yc3123_gjy_k860_3m_1k_soc",
+   "displayName": "K860",
+   "company": "rongyuan",
+   "platform": "yc3123",
+   "infor_id": [
+    142,
+    11
+   ]
+  },
+  {
+   "dev_id": 2959,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_fq_x122_3m_8k_8k",
+   "displayName": "G84 HE",
+   "company": "EPOMAKER",
+   "platform": "ry5088",
+   "infor_id": [
+    143,
+    11
+   ]
+  },
+  {
+   "dev_id": 2960,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_osd_dk61he_ry1049e_1m_8k",
+   "displayName": "Nyf HE 61K",
+   "company": "NyfterUG",
+   "platform": "ry5088",
+   "infor_id": [
+    144,
+    11
+   ]
+  },
+  {
+   "dev_id": 2963,
+   "vid": 14154,
+   "pid": 41552,
+   "name": "yc3123_fq_x87_mag75_3m_1k_soc",
+   "displayName": "VK 75 PRO",
+   "company": "VKMS",
+   "platform": "yc3123",
+   "infor_id": [
+    147,
+    11
+   ]
+  },
+  {
+   "dev_id": 2964,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_sg_sg9009_1m_8k",
+   "displayName": "X96HE",
+   "company": "AttackShark",
+   "platform": "ry5088",
+   "infor_id": [
+    148,
+    11
+   ]
+  },
+  {
+   "dev_id": 2966,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_sg8992_3m_8k_8k",
+   "displayName": "SG8992",
+   "company": "rongyuan",
+   "platform": "ry5088",
+   "infor_id": [
+    150,
+    11
+   ]
+  },
+  {
+   "dev_id": 2967,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_jz_gk68_3m_8k_8k",
+   "displayName": "GK68",
+   "company": "Skyloong",
+   "platform": "ry5088",
+   "infor_id": [
+    151,
+    11
+   ]
+  },
+  {
+   "dev_id": 2968,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_sg9047_3m_8k_8k",
+   "displayName": "R85Ultra",
+   "company": "AttackShark",
+   "platform": "ry5088",
+   "infor_id": [
+    152,
+    11
+   ]
+  },
+  {
+   "dev_id": 2969,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_xz_MagexZM_1M_8K",
+   "displayName": "Mage x ZM",
+   "company": "rongyuan",
+   "platform": "ry5088",
+   "infor_id": [
+    153,
+    11
+   ]
+  },
+  {
+   "dev_id": 2972,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_sg_yfk_sg8905_3m_8k_8k",
+   "displayName": "SG8905",
+   "company": "rongyuan",
+   "platform": "ry5088",
+   "infor_id": [
+    156,
+    11
+   ]
+  },
+  {
+   "dev_id": 2973,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_fl_k2402_3m_8k_8k",
+   "displayName": "NX108",
+   "company": "ABKO",
+   "platform": "ry5088",
+   "infor_id": [
+    157,
+    11
+   ]
+  },
+  {
+   "dev_id": 2976,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_zdm_beat75v2_lovely_8k",
+   "displayName": "Beat75",
+   "company": "rongyuan",
+   "platform": "ry5088",
+   "infor_id": [
+    160,
+    11
+   ]
+  },
+  {
+   "dev_id": 2978,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_sg_sg8948_3m_8k_1k",
+   "displayName": "K85PROHE",
+   "company": "AttackShark",
+   "platform": "ry5088",
+   "infor_id": [
+    162,
+    11
+   ]
+  },
+  {
+   "dev_id": 2980,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_xg985_8k_soc",
+   "displayName": "GM870Pro",
+   "company": "rongyuan",
+   "platform": "ry5088",
+   "infor_id": [
+    164,
+    11
+   ]
+  },
+  {
+   "dev_id": 2981,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_xg985_dm_8k",
+   "displayName": "GM870Pro",
+   "company": "rongyuan",
+   "platform": "ry5088",
+   "infor_id": [
+    165,
+    11
+   ]
+  },
+  {
+   "dev_id": 2982,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_sg_sg8967_1m_8k",
+   "displayName": "R86PROHE",
+   "company": "AttackShark",
+   "platform": "ry5088",
+   "infor_id": [
+    166,
+    11
+   ]
+  },
+  {
+   "dev_id": 2983,
+   "vid": 12625,
+   "pid": 20482,
+   "name": "yc3123_kk_y98_1m_1k_rgb_kb_soc",
+   "displayName": "Y98",
+   "company": "凯酷",
+   "platform": "yc3123",
+   "infor_id": [
+    167,
+    11
+   ]
+  },
+  {
+   "dev_id": 2987,
+   "vid": 12625,
+   "pid": 16422,
+   "name": "mouse_pan1080_g86e_3950_1k_8k",
+   "displayName": "G68",
+   "company": "腹灵",
+   "platform": "mouse",
+   "infor_id": [
+    171,
+    11
+   ]
+  },
+  {
+   "dev_id": 2988,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_fl_k245_3m_8k_8k",
+   "displayName": "X80HE",
+   "company": "腹灵",
+   "platform": "ry5088",
+   "infor_id": [
+    172,
+    11
+   ]
+  },
+  {
+   "dev_id": 2991,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_afd_fk51d2_1m_8k",
+   "displayName": "FK51D2",
+   "company": "rongyuan",
+   "platform": "ry5088",
+   "infor_id": [
+    175,
+    11
+   ]
+  },
+  {
+   "dev_id": 2993,
+   "vid": 12625,
+   "pid": 20482,
+   "name": "yc3123_fl_k2509_3m_1k_soc",
+   "displayName": "AKA108",
+   "company": "ABKO",
+   "platform": "yc3123",
+   "infor_id": [
+    177,
+    11
+   ]
+  },
+  {
+   "dev_id": 2996,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_nbd_mk812_1m_8k_ry1049es",
+   "displayName": "Gaming Keyboard",
+   "company": "rongyuan",
+   "platform": "ry5088",
+   "infor_id": [
+    180,
+    11
+   ]
+  },
+  {
+   "dev_id": 2998,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_nbd_mk811_1m_8k_ry1049es",
+   "displayName": "Gaming Keyboard",
+   "company": "rongyuan",
+   "platform": "ry5088",
+   "infor_id": [
+    182,
+    11
+   ]
+  },
+  {
+   "dev_id": 2999,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_jz_gk61_3m_8k_8k",
+   "displayName": "GK61",
+   "company": "Skyloong",
+   "platform": "ry5088",
+   "infor_id": [
+    183,
+    11
+   ]
+  },
+  {
+   "dev_id": 3002,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_afd_fk51D2_3m_8k_8k",
+   "displayName": "FK51D2",
+   "company": "rongyuan",
+   "platform": "ry5088",
+   "infor_id": [
+    186,
+    11
+   ]
+  },
+  {
+   "dev_id": 3003,
+   "vid": 12625,
+   "pid": 20524,
+   "name": "yc3121_fl_k235c_1m_1k_v300",
+   "displayName": "FL750",
+   "company": "腹灵",
+   "platform": "yc3121",
+   "infor_id": [
+    187,
+    11
+   ]
+  },
+  {
+   "dev_id": 3007,
+   "vid": 12625,
+   "pid": 20524,
+   "name": "yc3121_fl_k228_1m_1k",
+   "displayName": "GP87HE",
+   "company": "腹灵",
+   "platform": "yc3121",
+   "infor_id": [
+    191,
+    11
+   ]
+  },
+  {
+   "dev_id": 3009,
+   "vid": 12625,
+   "pid": 16422,
+   "name": "mouse_pan1080_r2b_3950_1k_8k",
+   "displayName": "R2",
+   "company": "AttackShark",
+   "platform": "mouse",
+   "infor_id": [
+    193,
+    11
+   ]
+  },
+  {
+   "dev_id": 3011,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_zdm_zap87_3m_8k_1k",
+   "displayName": "ZAP87",
+   "company": "EWEADNV",
+   "platform": "ry5088",
+   "infor_id": [
+    195,
+    11
+   ]
+  },
+  {
+   "dev_id": 3012,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_fl_k2402_3m_8k_8k",
+   "displayName": "NX108",
+   "company": "腹灵",
+   "platform": "ry5088",
+   "infor_id": [
+    196,
+    11
+   ]
+  },
+  {
+   "dev_id": 3014,
+   "vid": 12625,
+   "pid": 20538,
+   "name": "mouse_ry6608_qfn48_ms6003_3395_8k_8k",
+   "displayName": "G38 Mouse",
+   "company": "GTUNE",
+   "platform": "mouse",
+   "infor_id": [
+    198,
+    11
+   ]
+  },
+  {
+   "dev_id": 3015,
+   "vid": 12625,
+   "pid": 20538,
+   "name": "mouse_ry6608_qfn48_x3pro_3395_8k",
+   "displayName": "X3PRO",
+   "company": "AttackShark",
+   "platform": "mouse",
+   "infor_id": [
+    199,
+    11
+   ]
+  },
+  {
+   "dev_id": 3016,
+   "vid": 12625,
+   "pid": 20547,
+   "name": "mouse_ry6601_qfn48_r2_1k_8k",
+   "displayName": "R2",
+   "company": "AttackShark",
+   "platform": "mouse",
+   "infor_id": [
+    200,
+    11
+   ]
+  },
+  {
+   "dev_id": 3017,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_nbd_mk25057_1m_8k_ry1049es",
+   "displayName": "MAG-68 HE",
+   "company": "rongyuan",
+   "platform": "ry5088",
+   "infor_id": [
+    201,
+    11
+   ]
+  },
+  {
+   "dev_id": 3020,
+   "vid": 12625,
+   "pid": 20482,
+   "name": "yc3123_sfg_ss104_3m_1k_soc",
+   "displayName": "SS104",
+   "company": "rongyuan",
+   "platform": "yc3123",
+   "infor_id": [
+    204,
+    11
+   ]
+  },
+  {
+   "dev_id": 3022,
+   "vid": 12625,
+   "pid": 20482,
+   "name": "yc3123_fl_k2503_soc",
+   "displayName": "Air87",
+   "company": "腹灵",
+   "platform": "yc3123",
+   "infor_id": [
+    206,
+    11
+   ]
+  },
+  {
+   "dev_id": 3025,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_shengkuan_sg9028_3m_8k_8k_ry1049e",
+   "displayName": "ALUX68 AIR",
+   "company": "AJAZZMOUSE",
+   "platform": "ry5088",
+   "infor_id": [
+    209,
+    11
+   ]
+  },
+  {
+   "dev_id": 3032,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_dyh_1m_8k_ry1049e",
+   "displayName": "H60",
+   "company": "咪星人H60",
+   "platform": "ry5088",
+   "infor_id": [
+    216,
+    11
+   ]
+  },
+  {
+   "dev_id": 3033,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_dyh_uk_1m_8k_ry1049e",
+   "displayName": "H60",
+   "company": "咪星人H60",
+   "platform": "ry5088",
+   "infor_id": [
+    217,
+    11
+   ]
+  },
+  {
+   "dev_id": 3035,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_zdm_zap68_v2_1m_8k",
+   "displayName": "ZAP68",
+   "company": "EWEADNV",
+   "platform": "ry5088",
+   "infor_id": [
+    219,
+    11
+   ]
+  },
+  {
+   "dev_id": 3036,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_zdm_zap68_v2_3m_8k_1k",
+   "displayName": "ZAP68",
+   "company": "EWEADNV",
+   "platform": "ry5088",
+   "infor_id": [
+    220,
+    11
+   ]
+  },
+  {
+   "dev_id": 3037,
+   "vid": 12625,
+   "pid": 20524,
+   "name": "yc3121_youxiang_k80c_1m_1k_ry1049e",
+   "displayName": "Phantom X68RB",
+   "company": "rongyuan",
+   "platform": "yc3121",
+   "infor_id": [
+    221,
+    11
+   ]
+  },
+  {
+   "dev_id": 3038,
+   "vid": 12625,
+   "pid": 20524,
+   "name": "yc3121_youxiang_k80c_1m_1k_ry1049e",
+   "displayName": "Phantom X68PG",
+   "company": "rongyuan",
+   "platform": "yc3121",
+   "infor_id": [
+    222,
+    11
+   ]
+  },
+  {
+   "dev_id": 3040,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_zdm_k980_8k_1k",
+   "displayName": "B98",
+   "company": "蝴蝶",
+   "platform": "ry5088",
+   "infor_id": [
+    224,
+    11
+   ]
+  },
+  {
+   "dev_id": 3041,
+   "vid": 12625,
+   "pid": 16405,
+   "name": "yc3121_k2405b_soc",
+   "displayName": "K2405",
+   "company": "DNS",
+   "platform": "yc3121",
+   "infor_id": [
+    225,
+    11
+   ]
+  },
+  {
+   "dev_id": 3043,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_yx_k80_1m_8k_v400",
+   "displayName": "Phantom X68RB",
+   "company": "rongyuan",
+   "platform": "ry5088",
+   "infor_id": [
+    227,
+    11
+   ]
+  },
+  {
+   "dev_id": 3044,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_yx_x68pg_ry1049e_1m_8k",
+   "displayName": "Phantom X68PG",
+   "company": "rongyuan",
+   "platform": "ry5088",
+   "infor_id": [
+    228,
+    11
+   ]
+  },
+  {
+   "dev_id": 3045,
+   "vid": 14234,
+   "pid": 6149,
+   "name": "yc3123_k2505_3m_1k_soc",
+   "displayName": "HTK3180",
+   "company": "Hator",
+   "platform": "yc3123",
+   "infor_id": [
+    229,
+    11
+   ]
+  },
+  {
+   "dev_id": 3046,
+   "vid": 14234,
+   "pid": 6149,
+   "name": "yc3123_k2505_soc",
+   "displayName": "HTK4180",
+   "company": "Hator",
+   "platform": "yc3123",
+   "infor_id": [
+    230,
+    11
+   ]
+  },
+  {
+   "dev_id": 3047,
+   "vid": 12625,
+   "pid": 20482,
+   "name": "yc3123_k2506mxe_3m_1k_soc",
+   "displayName": "HTK4160",
+   "company": "Hator",
+   "platform": "yc3123",
+   "infor_id": [
+    231,
+    11
+   ]
+  },
+  {
+   "dev_id": 3049,
+   "vid": 12625,
+   "pid": 20482,
+   "name": "yc3123_k2506mxb_us_dm",
+   "displayName": "HTK1160",
+   "company": "Hator",
+   "platform": "yc3123",
+   "infor_id": [
+    233,
+    11
+   ]
+  },
+  {
+   "dev_id": 3051,
+   "vid": 14234,
+   "pid": 6149,
+   "name": "yc3123_k2506mxd_us_soc",
+   "displayName": "HTK3160",
+   "company": "Hator",
+   "platform": "yc3123",
+   "infor_id": [
+    235,
+    11
+   ]
+  },
+  {
+   "dev_id": 3053,
+   "vid": 12625,
+   "pid": 16422,
+   "name": "mouse_pan1080_g62_3395_1k_8k",
+   "displayName": "AJ159 PRO",
+   "company": "AJAZZMOUSE",
+   "platform": "mouse",
+   "infor_id": [
+    237,
+    11
+   ]
+  },
+  {
+   "dev_id": 3054,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_nbd_mk902b_3m_8k_1k",
+   "displayName": "Gaming Keyboard",
+   "company": "MageGee",
+   "platform": "ry5088",
+   "infor_id": [
+    238,
+    11
+   ]
+  },
+  {
+   "dev_id": 3055,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_gbl_kb001_3m_8k_8k_v500h",
+   "displayName": "Fib(68)",
+   "company": "DARKFORCE",
+   "platform": "ry5088",
+   "infor_id": [
+    239,
+    11
+   ]
+  },
+  {
+   "dev_id": 3057,
+   "vid": 12625,
+   "pid": 20482,
+   "name": "yc3123_fl_k2507mxc_soc",
+   "displayName": "HTK3100UA",
+   "company": "Hator",
+   "platform": "yc3123",
+   "infor_id": [
+    241,
+    11
+   ]
+  },
+  {
+   "dev_id": 3058,
+   "vid": 12625,
+   "pid": 20482,
+   "name": "yc3123_fl_k2507mxa_dm",
+   "displayName": "HTK1100UA",
+   "company": "Hator",
+   "platform": "yc3123",
+   "infor_id": [
+    242,
+    11
+   ]
+  },
+  {
+   "dev_id": 3059,
+   "vid": 12625,
+   "pid": 20482,
+   "name": "yc3123_hf_kf107_3m_oled_1k_rgb_kb_soc_v100",
+   "displayName": "RT75",
+   "company": "EPOMAKER",
+   "platform": "yc3123",
+   "infor_id": [
+    243,
+    11
+   ]
+  },
+  {
+   "dev_id": 3060,
+   "vid": 12625,
+   "pid": 20482,
+   "name": "yc3123_jk_tk75v3_3m_1k_soc",
+   "displayName": "TK75",
+   "company": "gamakay2",
+   "platform": "yc3123",
+   "infor_id": [
+    244,
+    11
+   ]
+  },
+  {
+   "dev_id": 3062,
+   "vid": 12625,
+   "pid": 20482,
+   "name": "yc3123_jk82_3m_1k_soc",
+   "displayName": "JK82-2",
+   "company": "SUNROSE",
+   "platform": "yc3123",
+   "infor_id": [
+    246,
+    11
+   ]
+  },
+  {
+   "dev_id": 3063,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_aifotu_1m_8k",
+   "displayName": "FK51H0-B",
+   "company": "rongyuan",
+   "platform": "ry5088",
+   "infor_id": [
+    247,
+    11
+   ]
+  },
+  {
+   "dev_id": 3064,
+   "vid": 12625,
+   "pid": 20527,
+   "name": "ry5088_mydj_agk75_u2_1m_pan1080_1K",
+   "displayName": "AGK75 U2",
+   "company": "蚂蚁电竞",
+   "platform": "ry5088",
+   "infor_id": [
+    248,
+    11
+   ]
+  },
+  {
+   "dev_id": 3065,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_sg_3m_8k_8k_ry1049es",
+   "displayName": "NS87",
+   "company": "AJAZZMOUSE",
+   "platform": "ry5088",
+   "infor_id": [
+    249,
+    11
+   ]
+  },
+  {
+   "dev_id": 3066,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_nbd_3m_8k_1k_ry1049es",
+   "displayName": "Gaming Keyboard",
+   "company": "rongyuan",
+   "platform": "ry5088",
+   "infor_id": [
+    250,
+    11
+   ]
+  },
+  {
+   "dev_id": 3067,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_nbd_1m_8k_ry1049es",
+   "displayName": "Gaming Keyboard",
+   "company": "rongyuan",
+   "platform": "ry5088",
+   "infor_id": [
+    251,
+    11
+   ]
+  },
+  {
+   "dev_id": 3069,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_xg_3m_8k_1k_ry1049es",
+   "displayName": "TK35",
+   "company": "rongyuan",
+   "platform": "ry5088",
+   "infor_id": [
+    253,
+    11
+   ]
+  },
+  {
+   "dev_id": 3070,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_xg_5_1m_8k_ry1049es",
+   "displayName": "TK35",
+   "company": "rongyuan",
+   "platform": "ry5088",
+   "infor_id": [
+    254,
+    11
+   ]
+  },
+  {
+   "dev_id": 3071,
+   "vid": 12625,
+   "pid": 20482,
+   "name": "yc3123_nbd_mk813_3m_1k",
+   "displayName": "Gaming Keyboard",
+   "company": "rongyuan",
+   "platform": "yc3123",
+   "infor_id": [
+    255,
+    11
+   ]
+  },
+  {
+   "dev_id": 3075,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_kf304b_1m_8k",
+   "displayName": "GK75",
+   "company": "rongyuan",
+   "platform": "ry5088",
+   "infor_id": [
+    3,
+    12
+   ]
+  },
+  {
+   "dev_id": 3076,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_ty_vn66_3m_8k_1k",
+   "displayName": "Varna Atlas",
+   "company": "Ninjadog",
+   "platform": "ry5088",
+   "infor_id": [
+    4,
+    12
+   ]
+  },
+  {
+   "dev_id": 3077,
+   "vid": 12625,
+   "pid": 20482,
+   "name": "yc3123_mk980_soc",
+   "displayName": "3MRGB-209",
+   "company": "ikbc",
+   "platform": "yc3123",
+   "infor_id": [
+    5,
+    12
+   ]
+  },
+  {
+   "dev_id": 3078,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_dyh_1m_8k_ry1049e",
+   "displayName": "H60HE",
+   "company": "IDJ",
+   "platform": "ry5088",
+   "infor_id": [
+    6,
+    12
+   ]
+  },
+  {
+   "dev_id": 3079,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_dyh_uk_1m_8k_ry1049e",
+   "displayName": "H60HE",
+   "company": "IDJ",
+   "platform": "ry5088",
+   "infor_id": [
+    7,
+    12
+   ]
+  },
+  {
+   "dev_id": 3081,
+   "vid": 12625,
+   "pid": 20538,
+   "name": "mouse_ry6608_qfn48_ms6003a_3395_8k_8k",
+   "displayName": "6003",
+   "company": "rongyuan",
+   "platform": "mouse",
+   "infor_id": [
+    9,
+    12
+   ]
+  },
+  {
+   "dev_id": 3086,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_sg_1m_8k_ry1049es",
+   "displayName": "X82HE",
+   "company": "AttackShark",
+   "platform": "ry5088",
+   "infor_id": [
+    14,
+    12
+   ]
+  },
+  {
+   "dev_id": 3087,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_cx_1m_8k_ry1049es",
+   "displayName": "CX68-2",
+   "company": "rongyuan",
+   "platform": "ry5088",
+   "infor_id": [
+    15,
+    12
+   ]
+  },
+  {
+   "dev_id": 3088,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_frm_fk5m_1m_8k_ry1049es",
+   "displayName": "Hammerwolf",
+   "company": "Hammerwolf",
+   "platform": "ry5088",
+   "infor_id": [
+    16,
+    12
+   ]
+  },
+  {
+   "dev_id": 3089,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_hf_1m_8k_ry1049e",
+   "displayName": "Defender 75",
+   "company": "PIIFOXDRIVER",
+   "platform": "ry5088",
+   "infor_id": [
+    17,
+    12
+   ]
+  },
+  {
+   "dev_id": 3091,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_akko_fun68_8k_1m",
+   "displayName": "FUN68",
+   "company": "MonsGeek",
+   "platform": "ry5088",
+   "infor_id": [
+    19,
+    12
+   ]
+  },
+  {
+   "dev_id": 3092,
+   "vid": 12625,
+   "pid": 20547,
+   "name": "mouse_ry6601_zj_v53_s205_1k_2k",
+   "displayName": "IO1.1Ultra v5.3",
+   "company": "IO1.1PRO",
+   "platform": "mouse",
+   "infor_id": [
+    20,
+    12
+   ]
+  },
+  {
+   "dev_id": 3094,
+   "vid": 12625,
+   "pid": 20530,
+   "name": "mouse_pan1076_yyx_018_3311",
+   "displayName": "EWEADN GS01Pro",
+   "company": "EWEADNV",
+   "platform": "mouse",
+   "infor_id": [
+    22,
+    12
+   ]
+  },
+  {
+   "dev_id": 3095,
+   "vid": 12625,
+   "pid": 20482,
+   "name": "yc3123_akko_5087v2_3m_1k",
+   "displayName": "5087B V2 HE",
+   "company": "akko",
+   "platform": "yc3123",
+   "infor_id": [
+    23,
+    12
+   ]
+  },
+  {
+   "dev_id": 3096,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_zdm_b87_1m_8k",
+   "displayName": "B87",
+   "company": "蝴蝶",
+   "platform": "ry5088",
+   "infor_id": [
+    24,
+    12
+   ]
+  },
+  {
+   "dev_id": 3099,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_akko_k0038_1m_8k_3099",
+   "displayName": "Verve68",
+   "company": "MonsGeek",
+   "platform": "ry5088",
+   "infor_id": [
+    27,
+    12
+   ]
+  },
+  {
+   "dev_id": 3100,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_nopita_mk825_3m_8k",
+   "displayName": "RT75 PRO",
+   "company": "YUNZII",
+   "platform": "ry5088",
+   "infor_id": [
+    28,
+    12
+   ]
+  },
+  {
+   "dev_id": 3101,
+   "vid": 12625,
+   "pid": 20547,
+   "name": "mouse_ry6601_ms302_v2_3311_1k_1k",
+   "displayName": "A5",
+   "company": "FREEWOLF",
+   "platform": "mouse",
+   "infor_id": [
+    29,
+    12
+   ]
+  },
+  {
+   "dev_id": 3102,
+   "vid": 12625,
+   "pid": 20482,
+   "name": "yc3123_nbd_mk907_3m_1k",
+   "displayName": "3MRGB-208",
+   "company": "ikbc",
+   "platform": "yc3123",
+   "infor_id": [
+    30,
+    12
+   ]
+  },
+  {
+   "dev_id": 3103,
+   "vid": 5215,
+   "pid": 889,
+   "name": "yc3123_bd_jk61_3m_1k",
+   "displayName": "JK61",
+   "company": "rongyuan",
+   "platform": "yc3123",
+   "infor_id": [
+    31,
+    12
+   ]
+  },
+  {
+   "dev_id": 3104,
+   "vid": 12625,
+   "pid": 20482,
+   "name": "yc3123_mk885a_yunziie87_soc",
+   "displayName": "YUNZII E87",
+   "company": "YUNZII",
+   "platform": "yc3123",
+   "infor_id": [
+    32,
+    12
+   ]
+  },
+  {
+   "dev_id": 3106,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_saishun_ka67_3m_8k",
+   "displayName": "KA67",
+   "company": "JINGSU",
+   "platform": "ry5088",
+   "infor_id": [
+    34,
+    12
+   ]
+  },
+  {
+   "dev_id": 3108,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_mk231v2_uk_8k_dm",
+   "displayName": "TIRUS HE80",
+   "company": "GAMEPOWER",
+   "platform": "ry5088",
+   "infor_id": [
+    36,
+    12
+   ]
+  },
+  {
+   "dev_id": 3109,
+   "vid": 12625,
+   "pid": 16422,
+   "name": "mouse_pan1080_YYX008_2_3950_1k_8k_3m",
+   "displayName": "Tanto PRO S",
+   "company": "Fantech",
+   "platform": "mouse",
+   "infor_id": [
+    37,
+    12
+   ]
+  },
+  {
+   "dev_id": 3111,
+   "vid": 14154,
+   "pid": 41526,
+   "name": "ry5088_0001_fq_x82_vk_nb68_max_3m_8k_8k",
+   "displayName": "NB68 Max",
+   "company": "VKMS",
+   "platform": "ry5088",
+   "infor_id": [
+    39,
+    12
+   ]
+  },
+  {
+   "dev_id": 3112,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_sg9061_8k_soc",
+   "displayName": "NS87",
+   "company": "AJAZZMOUSE",
+   "platform": "ry5088",
+   "infor_id": [
+    40,
+    12
+   ]
+  },
+  {
+   "dev_id": 3113,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_akko_mod007_v5_he_1m_8k",
+   "displayName": "MOD007 V5 HE",
+   "company": "akko",
+   "platform": "ry5088",
+   "infor_id": [
+    41,
+    12
+   ]
+  },
+  {
+   "dev_id": 3115,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_jc_gk8145g_1m_8k",
+   "displayName": "IROK ND_63",
+   "company": "rongyuan",
+   "platform": "ry5088",
+   "infor_id": [
+    43,
+    12
+   ]
+  },
+  {
+   "dev_id": 3118,
+   "vid": 12625,
+   "pid": 20482,
+   "name": "yc3123_nbd_mk25029_shadow_zeus75_1m_1k",
+   "displayName": "ZEUS75",
+   "company": "ShadowApp",
+   "platform": "yc3123",
+   "infor_id": [
+    46,
+    12
+   ]
+  },
+  {
+   "dev_id": 3127,
+   "vid": 12625,
+   "pid": 20482,
+   "name": "yc3123_akko_5075s_1m_1k",
+   "displayName": "5075S",
+   "company": "akko",
+   "platform": "yc3123",
+   "infor_id": [
+    55,
+    12
+   ]
+  },
+  {
+   "dev_id": 3129,
+   "vid": 12625,
+   "pid": 20525,
+   "name": "ry5088_akko_5075bv2he_1m",
+   "displayName": "5075S HE",
+   "company": "akko",
+   "platform": "ry5088",
+   "infor_id": [
+    57,
+    12
+   ]
+  },
+  {
+   "dev_id": 3131,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_akko_5087bv2he_1m_8k",
+   "displayName": "5087S V2 HE",
+   "company": "akko",
+   "platform": "ry5088",
+   "infor_id": [
+    59,
+    12
+   ]
+  },
+  {
+   "dev_id": 3147,
+   "vid": 12625,
+   "pid": 20482,
+   "name": "yc3123_akko_3068b_3m_1k_soc",
+   "displayName": "FUN68",
+   "company": "MonsGeek",
+   "platform": "yc3123",
+   "infor_id": [
+    75,
+    12
+   ]
+  },
+  {
+   "dev_id": 3236,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_hjk685_8k_dm",
+   "displayName": "MC68MAX",
+   "company": "MC68MAX",
+   "platform": "ry5088",
+   "infor_id": [
+    164,
+    12
+   ]
+  },
+  {
+   "dev_id": 3245,
+   "vid": 12625,
+   "pid": 20482,
+   "name": "yc3123_akko_mg108b_3m_1k",
+   "displayName": "MG108B",
+   "company": "MonsGeek",
+   "platform": "yc3123",
+   "infor_id": [
+    173,
+    12
+   ]
+  },
+  {
+   "dev_id": 3269,
+   "vid": 14574,
+   "pid": 1,
+   "name": "ry5088_akko_veekosshine68_3m_8k",
+   "displayName": "Shine68",
+   "company": "MonsGeek",
+   "platform": "ry5088",
+   "infor_id": [
+    197,
+    12
+   ]
+  },
+  {
+   "dev_id": 3270,
+   "vid": 14574,
+   "pid": 9,
+   "name": "ry5088_akko_veekosshine68_1m_8k",
+   "displayName": "Shine68",
+   "company": "MonsGeek",
+   "platform": "ry5088",
+   "infor_id": [
+    198,
+    12
+   ]
+  },
+  {
+   "dev_id": 3299,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_akko_fun60max_3m_8k",
+   "displayName": "FUN60 MAX",
+   "company": "MonsGeek",
+   "platform": "ry5088",
+   "infor_id": [
+    227,
+    12
+   ]
+  },
+  {
+   "dev_id": 3429,
+   "vid": 14574,
+   "pid": 9,
+   "name": "ry5088_fun68_uk_dm_8k",
+   "displayName": "FUN68 ISO",
+   "company": "MonsGeek",
+   "platform": "ry5088",
+   "infor_id": [
+    101,
+    13
+   ]
+  },
+  {
+   "dev_id": 3460,
+   "vid": 12625,
+   "pid": 20528,
+   "name": "ry5088_akko_k0038b_3m_8k_8k",
+   "displayName": "Verve68T",
+   "company": "MonsGeek",
+   "platform": "ry5088",
+   "infor_id": [
+    132,
+    13
+   ]
+  },
+  {
+   "dev_id": 3463,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_akko_k0038_1m_8k",
+   "displayName": "Verve68",
+   "company": "MonsGeek",
+   "platform": "ry5088",
+   "infor_id": [
+    135,
+    13
+   ]
+  },
+  {
+   "dev_id": 9997,
+   "vid": 12625,
+   "pid": 16422,
+   "name": "mouse_r3_1k_8k",
+   "displayName": "万能驱",
+   "company": "currentCompany.currentCompany",
+   "platform": "mouse",
+   "infor_id": [
+    13,
+    39
+   ]
+  },
+  {
+   "dev_id": 9998,
+   "vid": 12625,
+   "pid": 20538,
+   "name": "commonMsCh585",
+   "displayName": "万能驱",
+   "company": "currentCompany.currentCompany",
+   "platform": "commonMsCh585",
+   "infor_id": [
+    14,
+    39
+   ]
+  },
+  {
+   "dev_id": 9999,
+   "vid": 12625,
+   "pid": 20521,
+   "name": "ry5088_fq_vk99_3m_8k",
+   "displayName": "万能驱",
+   "company": "currentCompany.currentCompany",
+   "platform": "ry5088",
+   "infor_id": [
+    15,
+    39
+   ]
+  }
+ ]
+}
