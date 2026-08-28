@@ -11,7 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Run firmware host tests
+      - name: Run reference firmware host tests
         run: make -C firmware test
+      - name: Run X65 firmware host tests
+        run: make -C firmware PROFILE=2268 test
       - name: Validate profiles
         run: make -C firmware check
