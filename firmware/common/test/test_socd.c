@@ -28,6 +28,7 @@ int main(void)
   hall_engine_t h;
   uint8_t pressed[KS_NUM_KEYS];
   socd_ad_state_t s;
+  const uint16_t bottom_cmm = HALL_FULL_TRAVEL_CMM;
   int ai = find_usage(SOCD_HID_A), di = find_usage(SOCD_HID_D);
 
   CHECK(ai >= 0 && di >= 0, "default keymap contains A and D");
@@ -48,17 +49,17 @@ int main(void)
   CHECK(!pressed[ai] && pressed[di], "A held + D partial -> D (LKP)");
 
   /* Bottoming only the winning/newer key must NOT neutralize the pair. */
-  set_state(&h, pressed, ai, di, 1, 1, 200, SOCD_AD_BOTTOM_CMM);
+  set_state(&h, pressed, ai, di, 1, 1, 200, bottom_cmm);
   socd_ad_apply(&s, &h, pressed);
   CHECK(!pressed[ai] && pressed[di], "A partial + D bottom -> D (still LKP)");
 
-  set_state(&h, pressed, ai, di, 1, 1, SOCD_AD_BOTTOM_CMM, SOCD_AD_BOTTOM_CMM);
+  set_state(&h, pressed, ai, di, 1, 1, bottom_cmm, bottom_cmm);
   socd_ad_apply(&s, &h, pressed);
   CHECK(!pressed[ai] && !pressed[di], "A+D bottom -> neutral");
 
   /* Leave the both-bottom zone without releasing either logical key: the
    * pre-neutral last winner must immediately resume. */
-  set_state(&h, pressed, ai, di, 1, 1, SOCD_AD_BOTTOM_CMM, 200);
+  set_state(&h, pressed, ai, di, 1, 1, bottom_cmm, 200);
   socd_ad_apply(&s, &h, pressed);
   CHECK(!pressed[ai] && pressed[di], "leave bottom neutral -> previous D winner resumes");
 
@@ -76,15 +77,15 @@ int main(void)
   CHECK(pressed[ai] && !pressed[di], "D held + A partial -> A (LKP)");
 
   /* Symmetric one-key-bottom case: A remains winner because it was last. */
-  set_state(&h, pressed, ai, di, 1, 1, SOCD_AD_BOTTOM_CMM, 200);
+  set_state(&h, pressed, ai, di, 1, 1, bottom_cmm, 200);
   socd_ad_apply(&s, &h, pressed);
   CHECK(pressed[ai] && !pressed[di], "A bottom + D partial -> A (still LKP)");
 
-  set_state(&h, pressed, ai, di, 1, 1, SOCD_AD_BOTTOM_CMM, SOCD_AD_BOTTOM_CMM);
+  set_state(&h, pressed, ai, di, 1, 1, bottom_cmm, bottom_cmm);
   socd_ad_apply(&s, &h, pressed);
   CHECK(!pressed[ai] && !pressed[di], "D+A bottom -> neutral");
 
-  set_state(&h, pressed, ai, di, 1, 1, 200, SOCD_AD_BOTTOM_CMM);
+  set_state(&h, pressed, ai, di, 1, 1, 200, bottom_cmm);
   socd_ad_apply(&s, &h, pressed);
   CHECK(pressed[ai] && !pressed[di], "leave bottom neutral -> previous A winner resumes");
 
