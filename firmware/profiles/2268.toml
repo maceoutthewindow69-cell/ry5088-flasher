@@ -10,10 +10,10 @@
 # - live stock Hall-depth reporting on physical dev_id 2268 measured A and D
 #   from 0..350, i.e. a 3.50 mm calibrated travel range.
 # - stock-firmware disassembly matches the shared RY5088 scan wiring below.
-#
-# The raw ADC span is still inherited from the RY5088 reference profile. The
-# 3.50 mm physical range itself is measured; the counts/mm scale remains the
-# final bring-up uncertainty before treating a custom image as production-safe.
+# - X65 v309 preserves per-key released and bottom ADC calibration arrays at
+#   0x08032000 and 0x08032800 (126 x uint16 each, 55 AA page markers). The
+#   custom Hall engine reads their difference per key, so actuation/RT/bottom
+#   depth use the keyboard's own factory calibration rather than a guessed span.
 
 [meta]
 dev_id       = 2268
@@ -53,7 +53,7 @@ settle_mux  = 40
 [hall]
 press_decreases = true
 full_travel_cmm = 350       # measured stock depth stream: 0..350 = 0..3.50 mm
-assumed_span    = 1600      # reference raw ADC span; final hardware uncertainty
+assumed_span    = 1600      # fallback only if preserved per-key calibration is invalid
 noise_counts    = 16
 press_cmm       = 200
 release_cmm     = 150
