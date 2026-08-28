@@ -54,7 +54,7 @@ int main(void)
 
   /* Leave the both-bottom zone without releasing either logical key: the
    * pre-neutral last winner must immediately resume. */
-  set_state(&h, pressed, ai, di, 350, 1, 1, 200);
+  set_state(&h, pressed, ai, di, 1, 1, 350, 200);
   socd_ad_apply(&s, &h, pressed);
   CHECK(!pressed[ai] && pressed[di], "leave bottom neutral -> previous D winner resumes");
 
