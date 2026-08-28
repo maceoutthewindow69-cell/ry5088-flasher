@@ -94,8 +94,9 @@ jobs:
           cargo test
           cargo build --release
 
-  # Convenience binaries for X65 bring-up on Windows. `hid_diag.exe` only
-  # enumerates 3151:5030 interfaces and sends the read-only GET_INFOR request.
+  # Convenience binaries for X65 bring-up on Windows.
+  # `hid_diag.exe` probes GET_INFOR; `depth_monitor.exe` only toggles the
+  # stock firmware's volatile Hall-depth report stream and records events.
   flasher-windows:
     runs-on: windows-latest
     steps:
@@ -116,4 +117,5 @@ jobs:
           path: |
             flasher/target/release/ry-flash.exe
             flasher/target/release/hid_diag.exe
+            flasher/target/release/depth_monitor.exe
           if-no-files-found: error
