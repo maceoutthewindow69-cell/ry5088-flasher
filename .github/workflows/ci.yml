@@ -85,7 +85,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: x65-depth-socd-firmware
-          path: firmware/build/2268/ry5088_2268.bin
+          path: firmware/build/2268/ry5088_2268_flash.bin
           if-no-files-found: error
 
   # The ry-flash Rust binary: unit tests + release build.
