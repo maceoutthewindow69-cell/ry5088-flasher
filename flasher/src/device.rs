@@ -34,6 +34,10 @@ fn recv(d: &HidDevice) -> Option<Vec<u8>> {
     Some(buf[..n].to_vec())
 }
 
+fn parse_infor_reply(r: &[u8]) -> Option<(u16, String)> {
+    proto::parse_infor(r).or_else(|| if r.len() > 1 { proto::parse_infor(&r[1..]) } else { None })
+}
+
 impl Dev {
     pub fn new() -> Result<Self, String> {
         HidApi::new().map(|api| Dev { api }).map_err(|e| e.to_string())
@@ -65,19 +69,74 @@ impl Dev {
     pub fn normal_present(&self) -> bool { self.present(PID_NORMAL, UP_NORMAL) }
     pub fn boot_present(&self) -> bool { self.present(PID_BOOT, UP_BOOT) }
 
-    /// Read GET_INFOR from the connected keyboard (normal mode). Returns (dev_id, version).
-    pub fn read_infor(&self) -> Option<(u16, String)> {
-        let d = self.open(PID_NORMAL, UP_NORMAL, Some(2))?;
-        send(&d, &proto::get_infor()).ok()?;
+    /// Try GET_INFOR on one already-open normal-mode vendor HID interface.
+    fn read_infor_on(&self, d: &HidDevice) -> Option<(u16, String)> {
+        send(d, &proto::get_infor()).ok()?;
         sleep(ms(50));
-        let r = recv(&d)?;
-        // tolerate a leading report-id 0 (binding/platform dependent)
-        proto::parse_infor(&r).or_else(|| if r.len() > 1 { proto::parse_infor(&r[1..]) } else { None })
+        let r = recv(d)?;
+        parse_infor_reply(&r)
     }
 
-    /// Open the normal-mode device and read its USB manufacturer / product / serial strings.
+    /// Find the normal-mode vendor HID interface that actually speaks the RongYuan
+    /// protocol. Older boards commonly use usage 2, but some variants expose the
+    /// same vendor page on a different usage. GET_INFOR is read-only, so probing
+    /// matching 3151:5030 / usage-page FFFF interfaces is safe.
+    fn open_normal_command(&self) -> Option<HidDevice> {
+        // Preserve the known/common path first.
+        if let Some(d) = self.open(PID_NORMAL, UP_NORMAL, Some(2)) {
+            if self.read_infor_on(&d).is_some() {
+                return Some(d);
+            }
+        }
+
+        // Fall back to every other vendor interface on the same device.
+        for info in self.api.device_list() {
+            if info.vendor_id() != VID
+                || info.product_id() != PID_NORMAL
+                || info.usage_page() != UP_NORMAL
+                || info.usage() == 2
+            {
+                continue;
+            }
+            if let Ok(d) = info.open_device(&self.api) {
+                if self.read_infor_on(&d).is_some() {
+                    return Some(d);
+                }
+            }
+        }
+        None
+    }
+
+    /// Read GET_INFOR from the connected keyboard (normal mode). Returns (dev_id, version).
+    pub fn read_infor(&self) -> Option<(u16, String)> {
+        // Try usage 2 first, then every other vendor usage. We intentionally do
+        // the read directly here so the successful reply is returned rather than
+        // probing once and issuing a second command unnecessarily.
+        if let Some(d) = self.open(PID_NORMAL, UP_NORMAL, Some(2)) {
+            if let Some(info) = self.read_infor_on(&d) {
+                return Some(info);
+            }
+        }
+        for info in self.api.device_list() {
+            if info.vendor_id() != VID
+                || info.product_id() != PID_NORMAL
+                || info.usage_page() != UP_NORMAL
+                || info.usage() == 2
+            {
+                continue;
+            }
+            if let Ok(d) = info.open_device(&self.api) {
+                if let Some(reply) = self.read_infor_on(&d) {
+                    return Some(reply);
+                }
+            }
+        }
+        None
+    }
+
+    /// Open the normal-mode command interface and read its USB strings.
     pub fn usb_strings(&self) -> (Option<String>, Option<String>, Option<String>) {
-        match self.open(PID_NORMAL, UP_NORMAL, Some(2)) {
+        match self.open_normal_command() {
             Some(d) => (
                 d.get_manufacturer_string().ok().flatten(),
                 d.get_product_string().ok().flatten(),
@@ -89,7 +148,7 @@ impl Dev {
 
     /// Send the enter-bootloader sequence (WIPES config) and wait up to ~20s for re-enumeration to 502A.
     pub fn enter_bootloader(&mut self) -> Result<(), String> {
-        let d = self.open(PID_NORMAL, UP_NORMAL, Some(2)).ok_or("not in normal mode (3151:5030)")?;
+        let d = self.open_normal_command().ok_or("normal device found, but no vendor HID interface answered GET_INFOR")?;
         send(&d, &proto::isp_prepare()).map_err(|e| format!("enter-bootloader (ISP_PREPARE) failed: {e}"))?;
         sleep(ms(100));
         // This command resets the device, so its transfer may report an error as the port drops — that is
