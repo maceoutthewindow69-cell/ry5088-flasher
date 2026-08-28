@@ -23,23 +23,39 @@ static void frame(hall_engine_t *e, uint8_t *pressed, unsigned idx, uint16_t val
   hall_process(e, raw, pressed);
 }
 
+static uint16_t raw_for_travel(uint16_t rest, uint32_t travel)
+{
+#if HALL_PRESS_DECREASES
+  return (uint16_t)(rest - travel);
+#else
+  return (uint16_t)(rest + travel);
+#endif
+}
+
 int main(void)
 {
   hall_engine_t e;
   uint8_t pressed[KS_NUM_KEYS];
   const unsigned K = 9;            /* key index 9 = 'A' (0x04) in the default map */
-  const uint16_t REST = 3000, DEEP = 1000;
+  const uint16_t REST = 3000;
+  const uint32_t span = HALL_CMM_TO_COUNTS(HALL_FULL_TRAVEL_CMM);
+  const uint32_t act = HALL_CMM_TO_COUNTS(200);
+  const uint32_t rel = HALL_CMM_TO_COUNTS(150);
+  const uint32_t rtd = HALL_CMM_TO_COUNTS(50);
+  const uint16_t DEEP = raw_for_travel(REST, span);
 
   printf("[1] Normal-mode actuation + hysteresis\n");
   hall_init(&e);
   frame(&e, pressed, K, REST, REST);                 /* prime baseline */
   CHECK(pressed[K] == 0, "released after baseline seed");
   frame(&e, pressed, K, DEEP, REST);                 /* full press */
-  CHECK(pressed[K] == 1, "press at 2000 counts actuates");
-  /* travel 700 counts is in the (release 600, actuation 800) hysteresis band */
-  frame(&e, pressed, K, 2300, REST);
-  CHECK(pressed[K] == 1, "stays pressed in hysteresis band (700 counts)");
-  frame(&e, pressed, K, 2750, REST);                 /* travel 250 < release 600 */
+  CHECK(pressed[K] == 1, "full press actuates");
+  {
+    uint32_t mid = (act + rel) / 2u;
+    frame(&e, pressed, K, raw_for_travel(REST, mid), REST);
+    CHECK(pressed[K] == 1, "stays pressed in hysteresis band");
+  }
+  frame(&e, pressed, K, raw_for_travel(REST, rel / 2u), REST);
   CHECK(pressed[K] == 0, "releases once travel drops below release point");
 
   printf("[2] Rapid Trigger: release/re-press on direction reversal\n");
@@ -50,22 +66,32 @@ int main(void)
   frame(&e, pressed, K, REST, REST);                 /* prime */
   frame(&e, pressed, K, DEEP, REST);                 /* press deep */
   CHECK(pressed[K] == 1, "RT press on downstroke");
-  frame(&e, pressed, K, 1500, REST);                 /* up 500 counts (>0.5mm) */
-  CHECK(pressed[K] == 0, "RT release on upstroke past rt_release");
-  frame(&e, pressed, K, 1200, REST);                 /* down 300 counts (>0.5mm) */
-  CHECK(pressed[K] == 1, "RT re-press on downstroke past rt_press");
+  {
+    uint32_t up = rtd + 50u;
+    uint32_t released_travel = span > up ? span - up : 0u;
+    frame(&e, pressed, K, raw_for_travel(REST, released_travel), REST);
+    CHECK(pressed[K] == 0, "RT release on upstroke past rt_release");
+    uint32_t repress_travel = released_travel + rtd + 50u;
+    if (repress_travel > span) repress_travel = span;
+    frame(&e, pressed, K, raw_for_travel(REST, repress_travel), REST);
+    CHECK(pressed[K] == 1, "RT re-press on downstroke past rt_press");
+  }
 
   printf("[2b] Rapid Trigger honours the configured actuation point on first press\n");
   hall_init(&e);
-  hall_set_global(&e, &rt);                          /* act 800, rt_press 200 counts */
+  hall_set_global(&e, &rt);
   frame(&e, pressed, K, REST, REST);                 /* prime (travel 0) */
-  frame(&e, pressed, K, 2600, REST);                 /* travel 400 < actuation 800 */
-  CHECK(pressed[K] == 0, "RT does NOT actuate before the actuation point (travel 400)");
-  frame(&e, pressed, K, 2100, REST);                 /* travel 900 >= actuation 800 */
-  CHECK(pressed[K] == 1, "RT actuates once travel reaches the actuation point (900)");
-  frame(&e, pressed, K, REST, REST);                 /* full release (travel 0 <= release) */
+  frame(&e, pressed, K, raw_for_travel(REST, act / 2u), REST);
+  CHECK(pressed[K] == 0, "RT does NOT actuate before the actuation point");
+  {
+    uint32_t over = act + 100u;
+    if (over > span) over = span;
+    frame(&e, pressed, K, raw_for_travel(REST, over), REST);
+  }
+  CHECK(pressed[K] == 1, "RT actuates once travel reaches the actuation point");
+  frame(&e, pressed, K, REST, REST);                 /* full release */
   CHECK(pressed[K] == 0, "RT releases and re-arms on full release");
-  frame(&e, pressed, K, 2600, REST);                 /* travel 400 < actuation 800 again */
+  frame(&e, pressed, K, raw_for_travel(REST, act / 2u), REST);
   CHECK(pressed[K] == 0, "re-armed: the next first press again needs the actuation point");
 
   printf("[3] Boot report: modifiers fold, keycodes fill, de-dupe\n");
@@ -88,7 +114,6 @@ int main(void)
   {
     uint8_t pr[KS_NUM_KEYS]; memset(pr, 0, sizeof pr);
     uint8_t rep[HID_BOOT_REPORT_LEN];
-    /* 7 distinct letter keys: indices 7('1'),13('2'),19('3'),25('4'),31('5'),37('6'),43('7') */
     unsigned ks[7] = {7,13,19,25,31,37,43};
     for (int i = 0; i < 7; i++) pr[ks[i]] = 1;
     hid_build_boot_report(pr, keymap_default, rep);
