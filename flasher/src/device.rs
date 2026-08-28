@@ -9,9 +9,11 @@ use std::time::{Duration, Instant};
 
 pub const VID: u16 = 0x3151;
 pub const PID_NORMAL: u16 = 0x5030;
+pub const PID_X65_NORMAL: u16 = 0x502D;
 pub const PID_BOOT: u16 = 0x502A;
 const UP_NORMAL: u16 = 0xFFFF;
 const UP_BOOT: u16 = 0xFF01;
+const NORMAL_PIDS: &[u16] = &[PID_X65_NORMAL, PID_NORMAL];
 
 pub struct Dev {
     api: HidApi,
@@ -19,6 +21,7 @@ pub struct Dev {
 
 #[derive(Debug, Serialize)]
 pub struct HidProbe {
+    pub product_id: u16,
     pub usage_page: u16,
     pub usage: u16,
     pub interface_number: i32,
@@ -32,6 +35,14 @@ pub struct HidProbe {
 }
 
 fn ms(n: u64) -> Duration { Duration::from_millis(n) }
+
+fn is_normal_pid(pid: u16) -> bool {
+    NORMAL_PIDS.contains(&pid)
+}
+
+fn is_vendor_page(page: u16) -> bool {
+    page >= 0xFF00
+}
 
 /// send_feature_report wants [report_id=0, ...64 payload bytes].
 fn send(d: &HidDevice, frame: &[u8; 64]) -> Result<(), String> {
@@ -85,20 +96,24 @@ impl Dev {
         self.api.device_list().any(|i| i.vendor_id() == VID && i.product_id() == pid && i.usage_page() == up)
     }
 
-    pub fn normal_present(&self) -> bool { self.present(PID_NORMAL, UP_NORMAL) }
+    pub fn normal_present(&self) -> bool {
+        self.api.device_list().any(|i| i.vendor_id() == VID && is_normal_pid(i.product_id()))
+    }
+
     pub fn boot_present(&self) -> bool { self.present(PID_BOOT, UP_BOOT) }
 
-    /// Enumerate every normal-mode HID interface for 3151:5030 and issue only
-    /// GET_INFOR on each one. This is a read-only diagnostic: it does not send
-    /// ISP_PREPARE, enter the bootloader, erase config, or write flash.
+    /// Enumerate every candidate normal-mode HID interface and issue only GET_INFOR.
+    /// This is a read-only diagnostic: it does not send ISP_PREPARE, enter the
+    /// bootloader, erase config, or write flash.
     pub fn diagnostic_normal_interfaces(&self) -> Vec<HidProbe> {
         let mut out = Vec::new();
         for info in self.api.device_list() {
-            if info.vendor_id() != VID || info.product_id() != PID_NORMAL {
+            if info.vendor_id() != VID || !is_normal_pid(info.product_id()) {
                 continue;
             }
 
             let mut p = HidProbe {
+                product_id: info.product_id(),
                 usage_page: info.usage_page(),
                 usage: info.usage(),
                 interface_number: info.interface_number(),
@@ -152,23 +167,26 @@ impl Dev {
     }
 
     /// Find the normal-mode vendor HID interface that actually speaks the RongYuan
-    /// protocol. Older boards commonly use usage 2, but some variants expose the
-    /// same vendor page on a different usage. GET_INFOR is read-only, so probing
-    /// matching 3151:5030 / usage-page FFFF interfaces is safe.
+    /// protocol. Most known boards use 3151:5030 / vendor page FFFF. The X65 seen
+    /// in the field enumerates as 3151:502D, so probe both known normal-mode PIDs.
+    /// GET_INFOR is read-only.
     fn open_normal_command(&self) -> Option<HidDevice> {
-        // Preserve the known/common path first.
-        if let Some(d) = self.open(PID_NORMAL, UP_NORMAL, Some(2)) {
-            if self.read_infor_on(&d).is_some() {
-                return Some(d);
+        // Preserve the known/common usage-2 path first on both normal PIDs.
+        for &pid in NORMAL_PIDS {
+            if let Some(d) = self.open(pid, UP_NORMAL, Some(2)) {
+                if self.read_infor_on(&d).is_some() {
+                    return Some(d);
+                }
             }
         }
 
-        // Fall back to every other vendor interface on the same device.
+        // Fall back to any vendor-defined HID page for either normal PID. This
+        // covers X65 layouts where the command interface is a separate MI_02
+        // vendor-defined collection rather than the legacy FFFF/usage-2 shape.
         for info in self.api.device_list() {
             if info.vendor_id() != VID
-                || info.product_id() != PID_NORMAL
-                || info.usage_page() != UP_NORMAL
-                || info.usage() == 2
+                || !is_normal_pid(info.product_id())
+                || !is_vendor_page(info.usage_page())
             {
                 continue;
             }
@@ -183,19 +201,20 @@ impl Dev {
 
     /// Read GET_INFOR from the connected keyboard (normal mode). Returns (dev_id, version).
     pub fn read_infor(&self) -> Option<(u16, String)> {
-        // Try usage 2 first, then every other vendor usage. We intentionally do
-        // the read directly here so the successful reply is returned rather than
-        // probing once and issuing a second command unnecessarily.
-        if let Some(d) = self.open(PID_NORMAL, UP_NORMAL, Some(2)) {
-            if let Some(info) = self.read_infor_on(&d) {
-                return Some(info);
+        // Try the historical usage-2 interface first for each accepted PID.
+        for &pid in NORMAL_PIDS {
+            if let Some(d) = self.open(pid, UP_NORMAL, Some(2)) {
+                if let Some(info) = self.read_infor_on(&d) {
+                    return Some(info);
+                }
             }
         }
+
+        // Then probe every vendor-defined collection for 3151:502D/5030.
         for info in self.api.device_list() {
             if info.vendor_id() != VID
-                || info.product_id() != PID_NORMAL
-                || info.usage_page() != UP_NORMAL
-                || info.usage() == 2
+                || !is_normal_pid(info.product_id())
+                || !is_vendor_page(info.usage_page())
             {
                 continue;
             }
