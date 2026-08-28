@@ -8,8 +8,7 @@
 /* This fork targets the Attack Shark X65 HE (RY5088 dev_id 2268). Existing
  * profiles remain unchanged: unless a build explicitly overrides these macros,
  * the resolver is enabled only for that device id. The bottom threshold follows
- * the board profile's calibrated full-travel value, so "bottom" means 100% of
- * the travel model rather than an arbitrary host-side key state. */
+ * the board profile's calibrated full-travel value. */
 #ifndef SOCD_AD_ENABLED
 #define SOCD_AD_ENABLED (BOARD_DEV_ID == 2268u)
 #endif
@@ -19,7 +18,7 @@
 
 static uint8_t in_bottom_zone(const hall_engine_t *hall, unsigned idx)
 {
-  int threshold = (int)HALL_CMM_TO_COUNTS(SOCD_AD_BOTTOM_CMM);
+  int threshold = (int)hall_key_cmm_to_counts(hall, idx, SOCD_AD_BOTTOM_CMM);
   return hall->key[idx].travel >= threshold;
 }
 
