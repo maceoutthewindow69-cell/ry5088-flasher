@@ -28,12 +28,19 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends build-essential
 
-      - name: Host unit tests + profile lint
+      - name: Reference host tests
         working-directory: firmware
         run: |
           make test
           make test-wireless
-          make check
+
+      - name: X65 host tests
+        working-directory: firmware
+        run: make PROFILE=2268 test
+
+      - name: Profile lint
+        working-directory: firmware
+        run: make check
 
   # Cross-compile every board profile with arm-none-eabi-gcc + the Artery BSP.
   firmware-arm-build:
@@ -73,6 +80,13 @@ jobs:
             exit 1
           fi
           echo "built $built profile image(s)"
+
+      - name: Upload X65 experimental firmware
+        uses: actions/upload-artifact@v4
+        with:
+          name: x65-depth-socd-firmware
+          path: firmware/build/2268/ry5088_2268.bin
+          if-no-files-found: error
 
   # The ry-flash Rust binary: unit tests + release build.
   flasher:
