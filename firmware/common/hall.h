@@ -14,9 +14,8 @@
 #include "keyscan.h"
 #include "board_config.h"
 
-/* HALL_PRESS_DECREASES, HALL_FULL_TRAVEL_CMM and HALL_ASSUMED_SPAN are per-board /
- * per-switch values from the generated board_config.h. counts_per_cmm derives the
- * ADC<->travel scaling from the assumed span over full mechanical travel. */
+/* Global fallback scale. X65 builds replace this at runtime with each key's
+ * preserved stock calibration span when the calibration pages are valid. */
 #define HALL_CMM_TO_COUNTS(cmm) (((uint32_t)(cmm) * HALL_ASSUMED_SPAN) / HALL_FULL_TRAVEL_CMM)
 
 /* Per-key actuation modes (matches the magnetism KEY_MODE table). */
@@ -42,6 +41,7 @@ typedef struct {
 typedef struct {
   uint16_t baseline;        /* released rest reference (running extreme)         */
   uint16_t extreme;         /* deepest-press reference (running extreme)         */
+  uint16_t span_counts;     /* raw ADC counts over full travel; 0 => fallback    */
   int16_t  travel;          /* current travel in ADC counts (>=0 when pressed)   */
   int16_t  rt_ref;          /* rapid-trigger pivot (peak/valley travel)          */
   uint8_t  pressed;         /* actuation output                                  */
@@ -53,6 +53,14 @@ typedef struct {
   hall_key_t    key[KS_NUM_KEYS];
   hall_keycfg_t cfg[KS_NUM_KEYS];
 } hall_engine_t;
+
+/* Convert a physical distance to raw ADC counts for one key. A valid preserved
+ * calibration span wins; otherwise the profile's HALL_ASSUMED_SPAN is used. */
+static inline uint32_t hall_key_cmm_to_counts(const hall_engine_t *e, unsigned idx, uint16_t cmm)
+{
+  uint32_t span = e->key[idx].span_counts ? e->key[idx].span_counts : HALL_ASSUMED_SPAN;
+  return ((uint32_t)cmm * span) / HALL_FULL_TRAVEL_CMM;
+}
 
 /* Initialise all keys to defaults (actuation 2.0 mm, Rapid Trigger off). */
 void hall_init(hall_engine_t *e);
