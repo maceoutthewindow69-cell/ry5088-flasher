@@ -93,3 +93,25 @@ jobs:
         run: |
           cargo test
           cargo build --release
+
+  # Convenience binary for X65 bring-up on Windows. This lets the user run
+  # read-only device detection without installing Rust/Cargo locally.
+  flasher-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: dtolnay/rust-toolchain@stable
+
+      - name: Test and build Windows helper
+        working-directory: flasher
+        run: |
+          cargo test
+          cargo build --release
+
+      - name: Upload ry-flash.exe
+        uses: actions/upload-artifact@v4
+        with:
+          name: ry-flash-windows
+          path: flasher/target/release/ry-flash.exe
+          if-no-files-found: error
