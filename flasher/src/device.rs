@@ -3,6 +3,7 @@
 
 use crate::proto;
 use hidapi::{HidApi, HidDevice};
+use serde::Serialize;
 use std::thread::sleep;
 use std::time::{Duration, Instant};
 
@@ -14,6 +15,20 @@ const UP_BOOT: u16 = 0xFF01;
 
 pub struct Dev {
     api: HidApi,
+}
+
+#[derive(Debug, Serialize)]
+pub struct HidProbe {
+    pub usage_page: u16,
+    pub usage: u16,
+    pub interface_number: i32,
+    pub path: String,
+    pub open_ok: bool,
+    pub send_ok: bool,
+    pub recv_hex: Option<String>,
+    pub parsed_dev_id: Option<u16>,
+    pub parsed_version: Option<String>,
+    pub error: Option<String>,
 }
 
 fn ms(n: u64) -> Duration { Duration::from_millis(n) }
@@ -36,6 +51,10 @@ fn recv(d: &HidDevice) -> Option<Vec<u8>> {
 
 fn parse_infor_reply(r: &[u8]) -> Option<(u16, String)> {
     proto::parse_infor(r).or_else(|| if r.len() > 1 { proto::parse_infor(&r[1..]) } else { None })
+}
+
+fn hex_bytes(v: &[u8]) -> String {
+    v.iter().map(|b| format!("{b:02X}")).collect::<Vec<_>>().join(" ")
 }
 
 impl Dev {
@@ -68,6 +87,61 @@ impl Dev {
 
     pub fn normal_present(&self) -> bool { self.present(PID_NORMAL, UP_NORMAL) }
     pub fn boot_present(&self) -> bool { self.present(PID_BOOT, UP_BOOT) }
+
+    /// Enumerate every normal-mode HID interface for 3151:5030 and issue only
+    /// GET_INFOR on each one. This is a read-only diagnostic: it does not send
+    /// ISP_PREPARE, enter the bootloader, erase config, or write flash.
+    pub fn diagnostic_normal_interfaces(&self) -> Vec<HidProbe> {
+        let mut out = Vec::new();
+        for info in self.api.device_list() {
+            if info.vendor_id() != VID || info.product_id() != PID_NORMAL {
+                continue;
+            }
+
+            let mut p = HidProbe {
+                usage_page: info.usage_page(),
+                usage: info.usage(),
+                interface_number: info.interface_number(),
+                path: info.path().to_string_lossy().into_owned(),
+                open_ok: false,
+                send_ok: false,
+                recv_hex: None,
+                parsed_dev_id: None,
+                parsed_version: None,
+                error: None,
+            };
+
+            match info.open_device(&self.api) {
+                Err(e) => p.error = Some(format!("open: {e}")),
+                Ok(d) => {
+                    p.open_ok = true;
+                    match send(&d, &proto::get_infor()) {
+                        Err(e) => p.error = Some(format!("send_feature_report: {e}")),
+                        Ok(_) => {
+                            p.send_ok = true;
+                            sleep(ms(50));
+                            let mut buf = [0u8; 65];
+                            buf[0] = 0;
+                            match d.get_feature_report(&mut buf) {
+                                Err(e) => p.error = Some(format!("get_feature_report: {e}")),
+                                Ok(0) => p.error = Some("get_feature_report returned 0 bytes".into()),
+                                Ok(n) => {
+                                    let r = &buf[..n];
+                                    p.recv_hex = Some(hex_bytes(r));
+                                    if let Some((id, ver)) = parse_infor_reply(r) {
+                                        p.parsed_dev_id = Some(id);
+                                        p.parsed_version = Some(ver);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            out.push(p);
+        }
+        out
+    }
 
     /// Try GET_INFOR on one already-open normal-mode vendor HID interface.
     fn read_infor_on(&self, d: &HidDevice) -> Option<(u16, String)> {
