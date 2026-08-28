@@ -1,0 +1,108 @@
+# Attack Shark X65HE — experimental RY5088 bring-up profile.
+#
+# Evidence:
+# - dev_id 2268 / stock v309
+# - USB 3151:502D
+# - stock image SHA-256 503940d85d865339bf6250a3c1ad464303a760f3b6da6a6f43dd02fab833a2fa
+# - stock default-key table at file offset 0x1A894 contains 126 four-byte slots;
+#   slots 0..89 form 15 columns x 6 rows, with exactly 67 populated keys.
+# - slot 71 is the stock Fn special action [0x0A,0x01,0x00,0x00].
+#
+# GPIO/ADC and LED-chain wiring still follow the shared RY5088 reference
+# implementation and are NOT yet verified on physical X65 hardware. Do not
+# treat a successful build as proof that flashing is safe.
+
+[meta]
+dev_id       = 2268
+display_name = "X65HE"
+name         = "ry5088_sg9023_dm_8k_rt002"
+switch_type  = "HE"
+wireless     = false
+
+[usb]
+vid              = 0x3151
+pid              = 0x502D
+bcd_device       = 0x0309
+manufacturer_str = "AttackShark"
+product_str      = "Gaming Keyboard"
+config_str       = "Keyboard Config"
+interface_str    = "Keyboard Interface"
+
+[version]
+hi = 0x03
+lo = 0x09
+
+[matrix]
+cols = 15
+rows = 6
+
+# Shared reference-design wiring; unverified on X65.
+reset_pin  = "PA4"
+clock_pin  = "PA5"
+strobe_pin = "PA6"
+row_addr_pins = ["PC6", "PC7", "PC8"]
+enable_pin = "PF7"
+adc_pin     = "PA2"
+adc_channel = 2
+settle_col  = 200
+settle_mux  = 40
+
+[hall]
+# Bring-up defaults only. X65 advertises adjustable actuation through 3.4 mm,
+# but that does not prove exact mechanical full travel or ADC span.
+press_decreases = true
+full_travel_cmm = 400
+assumed_span    = 1600
+noise_counts    = 16
+press_cmm       = 200
+release_cmm     = 150
+rt_press_cmm    = 50
+rt_release_cmm  = 50
+
+[leds]
+# X65 has one RGB LED per physical key. Chain order has not been recovered from
+# stock yet; scan-order coordinates are used for harmless bring-up/effect layout.
+count   = 67
+max_col = 14
+max_row = 5
+phys_col = [
+  0, 0, 0, 0, 0, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3,
+  4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7, 8,
+  8, 8, 8, 9, 9, 9, 9, 10, 10, 10, 10, 10, 11, 11, 11, 11, 11, 12,
+  12, 12, 12, 13, 13, 13, 13, 13, 14, 14, 14, 14, 14,
+]
+phys_row = [
+  1, 2, 3, 4, 5, 1, 2, 3, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5,
+  1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 5, 1, 2, 3, 4, 1,
+  2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1,
+  2, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5,
+]
+
+[rgb]
+bit0     = 0xC0
+bit1     = 0xF0
+data_pin = "PA10"
+order    = "GRB"
+
+[keymap]
+# HID usage IDs indexed by scan site = col*6 + row.
+# Stock Fn is physical slot 71 (col 11,row 5), encoded by stock as special
+# [0x0A,0x01,0x00,0x00]. The current custom keymap format cannot represent
+# special actions, so that one slot is temporarily 0x00 (dead) in bring-up.
+codes = [
+  0x00, 0x29, 0x2B, 0x39, 0xE1, 0xE0,
+  0x00, 0x1E, 0x14, 0x04, 0x00, 0x00,
+  0x00, 0x1F, 0x1A, 0x16, 0x1D, 0xE3,
+  0x00, 0x20, 0x08, 0x07, 0x1B, 0xE2,
+  0x00, 0x21, 0x15, 0x09, 0x06, 0x00,
+  0x00, 0x22, 0x17, 0x0A, 0x19, 0x00,
+  0x00, 0x23, 0x1C, 0x0B, 0x05, 0x2C,
+  0x00, 0x24, 0x18, 0x0D, 0x11, 0x00,
+  0x00, 0x25, 0x0C, 0x0E, 0x10, 0x00,
+  0x00, 0x26, 0x12, 0x0F, 0x36, 0x00,
+  0x00, 0x27, 0x13, 0x33, 0x37, 0xE6,
+  0x00, 0x2D, 0x2F, 0x34, 0x38, 0x00,
+  0x00, 0x2E, 0x30, 0x00, 0xE5, 0x50,
+  0x00, 0x2A, 0x31, 0x28, 0x52, 0x51,
+  0x00, 0x4A, 0x4C, 0x4B, 0x4E, 0x4F,
+]
