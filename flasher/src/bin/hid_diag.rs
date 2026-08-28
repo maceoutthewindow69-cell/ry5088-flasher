@@ -4,7 +4,7 @@ use std::thread::sleep;
 use std::time::Duration;
 
 const VID: u16 = 0x3151;
-const PID: u16 = 0x5030;
+const PIDS: &[u16] = &[0x502D, 0x5030];
 
 fn get_infor_frame() -> [u8; 64] {
     let mut r = [0u8; 64];
@@ -36,7 +36,7 @@ fn main() {
 
     let mut interfaces = Vec::new();
     for info in api.device_list() {
-        if info.vendor_id() != VID || info.product_id() != PID { continue; }
+        if info.vendor_id() != VID || !PIDS.contains(&info.product_id()) { continue; }
 
         let mut open_ok = false;
         let mut send_ok = false;
@@ -77,6 +77,7 @@ fn main() {
         }
 
         interfaces.push(json!({
+            "pid": format!("0x{:04X}", info.product_id()),
             "usage_page": format!("0x{:04X}", info.usage_page()),
             "usage": format!("0x{:04X}", info.usage()),
             "interface_number": info.interface_number(),
@@ -93,7 +94,7 @@ fn main() {
     println!("{}", json!({
         "ok": true,
         "vid": "0x3151",
-        "pid": "0x5030",
+        "pids": ["0x502D", "0x5030"],
         "count": interfaces.len(),
         "interfaces": interfaces
     }));
