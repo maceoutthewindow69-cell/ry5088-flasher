@@ -114,7 +114,7 @@ TEST_CFLAGS = -std=gnu11 -Wall -Wextra -I$(SRC) -I$(GENDIR)
 test: $(GENDIR)/.gen
 	cc $(TEST_CFLAGS) $(SRC)/test/test_engine.c $(SRC)/hall.c $(SRC)/socd.c $(SRC)/hid_report.c -o $(GENDIR)/test_engine
 	@$(GENDIR)/test_engine
-	cc $(TEST_CFLAGS) -DSOCD_AD_ENABLED=1 -DSOCD_AD_BOTTOM_CMM=340 \
+	cc $(TEST_CFLAGS) -DSOCD_AD_ENABLED=1 \
 	   $(SRC)/test/test_socd.c $(SRC)/socd.c -o $(GENDIR)/test_socd
 	@$(GENDIR)/test_socd
 	cc $(TEST_CFLAGS) $(SRC)/test/test_functional.c $(SRC)/vendor_proto.c $(SRC)/led_effects.c \
