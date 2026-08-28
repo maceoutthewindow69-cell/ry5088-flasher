@@ -7,10 +7,13 @@
 # - stock default-key table at file offset 0x1A894 contains 126 four-byte slots;
 #   slots 0..89 form 15 columns x 6 rows, with exactly 67 populated keys.
 # - slot 71 is the stock Fn special action [0x0A,0x01,0x00,0x00].
+# - live stock Hall-depth reporting on physical dev_id 2268 measured A and D
+#   from 0..350, i.e. a 3.50 mm calibrated travel range.
+# - stock-firmware disassembly matches the shared RY5088 scan wiring below.
 #
-# GPIO/ADC and LED-chain wiring still follow the shared RY5088 reference
-# implementation and are NOT yet verified on physical X65 hardware. Do not
-# treat a successful build as proof that flashing is safe.
+# The raw ADC span is still inherited from the RY5088 reference profile. The
+# 3.50 mm physical range itself is measured; the counts/mm scale remains the
+# final bring-up uncertainty before treating a custom image as production-safe.
 
 [meta]
 dev_id       = 2268
@@ -36,7 +39,7 @@ lo = 0x09
 cols = 15
 rows = 6
 
-# Shared reference-design wiring; unverified on X65.
+# Verified against the X65 v309 stock scan routine.
 reset_pin  = "PA4"
 clock_pin  = "PA5"
 strobe_pin = "PA6"
@@ -48,11 +51,9 @@ settle_col  = 200
 settle_mux  = 40
 
 [hall]
-# Bring-up defaults only. X65 advertises adjustable actuation through 3.4 mm,
-# but that does not prove exact mechanical full travel or ADC span.
 press_decreases = true
-full_travel_cmm = 400
-assumed_span    = 1600
+full_travel_cmm = 350       # measured stock depth stream: 0..350 = 0..3.50 mm
+assumed_span    = 1600      # reference raw ADC span; final hardware uncertainty
 noise_counts    = 16
 press_cmm       = 200
 release_cmm     = 150
