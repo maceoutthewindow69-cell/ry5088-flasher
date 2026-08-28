@@ -3,8 +3,13 @@
  *          Rapid Trigger. Pure logic (no hardware).
  */
 #include "hall.h"
+#include "socd.h"
+#include "board_keymap.h"
 
 /* HALL_NOISE_COUNTS and the per-key defaults (HALL_DEF_*) come from board_config.h. */
+
+static socd_ad_state_t socd_ad;
+static uint8_t socd_ad_ready = 0;
 
 static void hall_seed(hall_key_t *k, uint16_t raw)
 {
@@ -30,6 +35,7 @@ void hall_init(hall_engine_t *e)
     e->cfg[i] = d;
     e->key[i].primed = 0;
   }
+  socd_ad_ready = 0;
 }
 
 void hall_set_global(hall_engine_t *e, const hall_keycfg_t *cfg)
@@ -124,5 +130,16 @@ void hall_process(hall_engine_t *e, const uint16_t *raw, uint8_t *pressed)
     }
 
     if (pressed) pressed[i] = k->pressed;
+  }
+
+  /* Resolve A/D only after every key's Hall/RT state and live travel have been
+   * updated for this scan. This keeps physical sensing independent from the HID
+   * policy while ensuring the report layer sees the final SOCD result. */
+  if (pressed) {
+    if (!socd_ad_ready) {
+      socd_ad_init(&socd_ad, keymap_default);
+      socd_ad_ready = 1;
+    }
+    socd_ad_apply(&socd_ad, e, pressed);
   }
 }
