@@ -1,0 +1,17 @@
+name: X65 SOCD host tests
+
+on:
+  push:
+    branches: [x65-depth-socd]
+  pull_request:
+    branches: [main]
+
+jobs:
+  host-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run firmware host tests
+        run: make -C firmware test
+      - name: Validate profiles
+        run: make -C firmware check
