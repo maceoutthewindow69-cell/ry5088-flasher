@@ -94,8 +94,8 @@ jobs:
           cargo test
           cargo build --release
 
-  # Convenience binary for X65 bring-up on Windows. This lets the user run
-  # read-only device detection without installing Rust/Cargo locally.
+  # Convenience binaries for X65 bring-up on Windows. `hid_diag.exe` only
+  # enumerates 3151:5030 interfaces and sends the read-only GET_INFOR request.
   flasher-windows:
     runs-on: windows-latest
     steps:
@@ -103,15 +103,17 @@ jobs:
 
       - uses: dtolnay/rust-toolchain@stable
 
-      - name: Test and build Windows helper
+      - name: Test and build Windows helpers
         working-directory: flasher
         run: |
           cargo test
           cargo build --release
 
-      - name: Upload ry-flash.exe
+      - name: Upload Windows helpers
         uses: actions/upload-artifact@v4
         with:
           name: ry-flash-windows
-          path: flasher/target/release/ry-flash.exe
+          path: |
+            flasher/target/release/ry-flash.exe
+            flasher/target/release/hid_diag.exe
           if-no-files-found: error
