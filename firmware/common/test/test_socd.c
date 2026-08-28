@@ -43,9 +43,20 @@ int main(void)
   socd_ad_apply(&s, &h, pressed);
   CHECK(!pressed[ai] && pressed[di], "A held + D partial -> D (LKP)");
 
+  /* Bottoming only the winning/newer key must NOT neutralize the pair. */
+  set_state(&h, pressed, ai, di, 1, 1, 200, 350);
+  socd_ad_apply(&s, &h, pressed);
+  CHECK(!pressed[ai] && pressed[di], "A partial + D bottom -> D (still LKP)");
+
   set_state(&h, pressed, ai, di, 1, 1, 350, 350);
   socd_ad_apply(&s, &h, pressed);
   CHECK(!pressed[ai] && !pressed[di], "A+D bottom -> neutral");
+
+  /* Leave the both-bottom zone without releasing either logical key: the
+   * pre-neutral last winner must immediately resume. */
+  set_state(&h, pressed, ai, di, 350, 1, 1, 200);
+  socd_ad_apply(&s, &h, pressed);
+  CHECK(!pressed[ai] && pressed[di], "leave bottom neutral -> previous D winner resumes");
 
   set_state(&h, pressed, ai, di, 1, 0, 250, 0);
   socd_ad_apply(&s, &h, pressed);
@@ -60,9 +71,18 @@ int main(void)
   socd_ad_apply(&s, &h, pressed);
   CHECK(pressed[ai] && !pressed[di], "D held + A partial -> A (LKP)");
 
+  /* Symmetric one-key-bottom case: A remains winner because it was last. */
+  set_state(&h, pressed, ai, di, 1, 1, 350, 200);
+  socd_ad_apply(&s, &h, pressed);
+  CHECK(pressed[ai] && !pressed[di], "A bottom + D partial -> A (still LKP)");
+
   set_state(&h, pressed, ai, di, 1, 1, 350, 350);
   socd_ad_apply(&s, &h, pressed);
   CHECK(!pressed[ai] && !pressed[di], "D+A bottom -> neutral");
+
+  set_state(&h, pressed, ai, di, 1, 1, 200, 350);
+  socd_ad_apply(&s, &h, pressed);
+  CHECK(pressed[ai] && !pressed[di], "leave bottom neutral -> previous A winner resumes");
 
   set_state(&h, pressed, ai, di, 0, 1, 0, 250);
   socd_ad_apply(&s, &h, pressed);
