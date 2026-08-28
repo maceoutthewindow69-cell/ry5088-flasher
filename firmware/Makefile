@@ -50,7 +50,7 @@ LDFLAGS = $(ARCH) -specs=nano.specs -specs=nosys.specs -T $(SRC)/at32f405_app.ld
 # ---- sources ----
 # application engine + USB stack + vendor protocol (shared across all boards).
 # NB: led_layout.c is NOT here — the LED map is the generated board_led_map.c.
-APP_C = main.c keyscan.c hall.c hid_report.c vendor_proto.c monsgeek_class.c \
+APP_C = main.c keyscan.c hall.c socd.c hid_report.c vendor_proto.c monsgeek_class.c \
         monsgeek_desc.c descriptors.c board.c led_effects.c rgb.c \
         persist.c flash_efc.c wireless.c
 # system / interrupt glue derived from the Artery BSP templates.
@@ -112,8 +112,11 @@ $(TARGET).bin: $(TARGET).elf
 # ---- host self-tests (pure logic; native cc; needs the generated headers) ----
 TEST_CFLAGS = -std=gnu11 -Wall -Wextra -I$(SRC) -I$(GENDIR)
 test: $(GENDIR)/.gen
-	cc $(TEST_CFLAGS) $(SRC)/test/test_engine.c $(SRC)/hall.c $(SRC)/hid_report.c -o $(GENDIR)/test_engine
+	cc $(TEST_CFLAGS) $(SRC)/test/test_engine.c $(SRC)/hall.c $(SRC)/socd.c $(SRC)/hid_report.c -o $(GENDIR)/test_engine
 	@$(GENDIR)/test_engine
+	cc $(TEST_CFLAGS) -DSOCD_AD_ENABLED=1 -DSOCD_AD_BOTTOM_CMM=340 \
+	   $(SRC)/test/test_socd.c $(SRC)/socd.c -o $(GENDIR)/test_socd
+	@$(GENDIR)/test_socd
 	cc $(TEST_CFLAGS) $(SRC)/test/test_functional.c $(SRC)/vendor_proto.c $(SRC)/led_effects.c \
 	   $(GENDIR)/board_led_map.c $(SRC)/persist.c -o $(GENDIR)/test_functional
 	@$(GENDIR)/test_functional
@@ -129,7 +132,7 @@ check:
 	  python3 $(GEN) $$p build/.check/$$id >/dev/null && echo "ok    $$p" || { echo "FAIL  $$p"; ok=0; }; \
 	done; rm -rf build/.check; [ $$ok = 1 ]
 
-# ---- print the dev_id <-> display_name table from the profiles ----
+# ---- print the dev_id <-> display_name table from every profile present ----
 models:
 	@python3 gen/models_table.py
 
