@@ -5,8 +5,13 @@
 #include "board_config.h"
 #include "keyscan.h"
 
+/* This fork targets the Attack Shark X65 HE (RY5088 dev_id 2268). Existing
+ * profiles remain unchanged: unless a build explicitly overrides these macros,
+ * the resolver is enabled only for that device id. The bottom threshold follows
+ * the board profile's calibrated full-travel value, so "bottom" means 100% of
+ * the travel model rather than an arbitrary host-side key state. */
 #ifndef SOCD_AD_ENABLED
-#define SOCD_AD_ENABLED 0
+#define SOCD_AD_ENABLED (BOARD_DEV_ID == 2268u)
 #endif
 #ifndef SOCD_AD_BOTTOM_CMM
 #define SOCD_AD_BOTTOM_CMM HALL_FULL_TRAVEL_CMM
