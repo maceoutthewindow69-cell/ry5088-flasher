@@ -5,7 +5,7 @@
 # board_config.h / board_keymap.h / board_led_map.c that common/ compiles
 # against (written to build/<dev_id>/).
 #
-#   make PROFILE=2307           -> build/2307/ry5088_2307.bin (+ vector-table check)
+#   make PROFILE=2307           -> build/2307/ry5088_2307.bin (+ flash image)
 #   make test                   -> host self-tests (native gcc; no BSP needed)
 #   make check                  -> validate every profile through the generator
 #   make models                 -> print the dev_id <-> name table
@@ -19,9 +19,11 @@ PROFILE ?= 2307
 
 SRC     = common
 GEN     = gen/gen_profile.py
+PACK    = gen/pack_ry_image.py
 GENDIR  = build/$(PROFILE)
 OBJ     = $(GENDIR)/obj
 TARGET  = $(GENDIR)/ry5088_$(PROFILE)
+FLASH_IMAGE = $(TARGET)_flash.bin
 
 CC      = arm-none-eabi-gcc
 OBJCOPY = arm-none-eabi-objcopy
@@ -70,7 +72,7 @@ OBJS = $(addprefix $(OBJ)/,$(APP_C:.c=.o) $(SYS_C:.c=.o) $(BSP_C:.c=.o) $(LOCAL_
 vpath %.c $(SRC):$(DRV)/src:$(USBDRV)/src
 vpath %.s $(SRC)
 
-all: $(TARGET).bin
+all: $(TARGET).bin $(FLASH_IMAGE)
 
 # ---- code generation (one profile -> board_config.h / _keymap.h / _led_map.c) --
 $(GENDIR)/.gen: profiles/$(PROFILE).toml $(GEN)
@@ -107,7 +109,11 @@ $(TARGET).bin: $(TARGET).elf
 	@printf 'initial SP / reset vector (first 2 words of .bin): '
 	@od -An -tx4 -N8 $(TARGET).bin
 	@echo "expect SP=20019800, reset in 08005201..08025800 (thumb bit => odd)"
-	@echo "image $(TARGET).bin built (load @0x08005200 via RY DFU / ROM-DFU)"
+	@echo "app image $(TARGET).bin built (load @0x08005200 via ROM-DFU)"
+
+$(FLASH_IMAGE): $(TARGET).bin $(PACK)
+	python3 $(PACK) $(TARGET).bin $@
+	@echo "RY resident-DFU image $@ built (load starts @0x08005000)"
 
 # ---- host self-tests (pure logic; native cc; needs the generated headers) ----
 TEST_CFLAGS = -std=gnu11 -Wall -Wextra -I$(SRC) -I$(GENDIR)
